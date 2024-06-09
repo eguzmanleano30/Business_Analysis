@@ -60,14 +60,15 @@ The following table shows the result of the exploration analysis of numerical va
 
 On the other hand, the exploration of the “rating” variable reveals a near-normal distribution with a slight left skewness. Values of 0 and empty strings were reclassified as NA to represent missing values accurately. Given its minimal skew and generally balanced distribution, no transformation is recommended, facilitating a straightforward analysis of the dataset's ratings 
 
-
-
- 
-
- 
+**Histogram of rating variable without any changing 
+**
+![ rating_variable_without_any_changing](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/7b1a498a-f522-4456-9630-34cf51fa297d)
 
  
 
+**Histogram of rating variable with classification of missing values
+** 
+![ rating_variable_with_classification_missing_value](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/7cd555df-d905-435e-8cc5-4283a30023a9)
 
 
 
