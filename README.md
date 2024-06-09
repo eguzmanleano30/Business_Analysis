@@ -53,7 +53,7 @@ The following table shows the result of the exploration analysis of numerical va
 
 | Variable          | Skewness | Kurtosis | QQ Plot      | Box Plot                  | Histogram           | Transfor. suggestion | 
 | ----------------- | -------- | -------- | ------------ | ------------------------- | ------------------- | -------------------- |
-| love              | [9.63](#Skewness:-9.63)     | 162.13   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
+| love              | 9.63     | 162.13   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          | [love](EDA/PDF/exploration_love.pdf)
 | Number of reviews | 9.75     | 135.21   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
 | price             | 3.16     | 17.723   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
 | Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
