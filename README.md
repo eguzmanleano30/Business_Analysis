@@ -3,13 +3,14 @@
 Sephora data incorporates varied variables, capturing product characteristics and customer interactions on Sephora's website. Categorical variables include product brand, category, size, marketing flags, and product details, while numerical variables comprise product ID, rating, number of reviews, customer affection (love), and price-related metrics. Before analysis, the dataset undergoes meticulous cleaning to handle missing values, rectify data errors, and ensure uniformity across categories. The variables irrelevant to our research questions will be eliminated to streamline the analysis. 
 
 ## Understand The Dataset
-```{r}
 
+Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. Sephora's variables are grouped into four types of variables:
+
+```{r}
 dim(sephora)
 
 skim(sephora)
 ```
-Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. Sephora's variables are grouped into four types of variables:
 
 -   **Informative Variables:** These include essential product details, such as their IDs, brands, names, sizes, URLs, available options (like colors and sizes), product details, usage instructions, ingredients, and marketing flags. 
 
