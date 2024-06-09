@@ -19,7 +19,7 @@ dim(sephora)
 
 skim(sephora)
 ```
-[ouput](https://github.com/eguzmanleano30/Exploration_Data_Analisis/blob/main/EDA/ExplorationData.png)
+[ouput](EDA/picture/ExplorationData.png)
 
 ## Clean the Data 
 
