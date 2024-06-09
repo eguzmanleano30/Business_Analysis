@@ -51,12 +51,12 @@ The following table shows the result of the exploration analysis of numerical va
 
 
 
-| Variable          | Skewness | Kurtosis | QQ Plot      | Box Plot                  | Histogram           | Transfor. suggestion | 
-| ----------------- | -------- | -------- | ------------ | ------------------------- | ------------------- | -------------------- |
-| ![love](EDA/PDF/exploration_love_variable.pdf)              | 9.63     | 162.13   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
-| ![Number of reviews](EDA/PDF/exploration_price_variable.pdf) | 9.75     | 135.21   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
-| price             | 3.16     | 17.723   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
-| Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
+| Variable          | Skewness | Kurtosis | QQ Plot      | Box Plot                  | Histogram           | Transfor. suggestion | Output and code   |
+| ----------------- | -------- | -------- | ------------ | ------------------------- | ------------------- | -------------------- |------------------ |
+| love              | 9.63     | 162.13   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          | ![Appendice B](EDA/PDF/exploration_love_variable.pdf)   |
+| Number of reviews | 9.75     | 135.21   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          | ![Appendice C](EDA/PDF/exploration_price_variable.pdf)   |
+| price             | 3.16     | 17.723   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |   Appendice D   |
+| Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |   Appendice E   |
 
 
 
