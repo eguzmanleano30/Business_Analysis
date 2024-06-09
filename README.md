@@ -11,7 +11,7 @@ dim(sephora)
 
 skim(sephora)
 ```
-
+[ouput](https://github.com/eguzmanleano30/Exploration_Data_Analisis/blob/main/EDA/ExplorationData.png)
 -   **Informative Variables:** These include essential product details, such as their IDs, brands, names, sizes, URLs, available options (like colors and sizes), product details, usage instructions, ingredients, and marketing flags. 
 
 -   **Binary Variables:** These variables indicate specific product attributes or conditions using binary values, such as whether the product is sold exclusively online, is exclusive to Sephora's website, is a limited-edition item, or has a limited-time offer
