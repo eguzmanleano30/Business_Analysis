@@ -56,11 +56,10 @@ The following table shows the result of the exploration analysis of numerical va
 | love              | 9.63     | 162.13   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          | ![Appendice B](EDA/PDF/exploration_love_variable.pdf)   |
 | Number of reviews | 9.75     | 135.21   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          | ![Appendice C](EDA/PDF/exploration_price_variable.pdf)   |
 | price             | 3.16     | 17.723   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |   ![Appendice D](EDA/PDF/exploration_value_price_variable.pdf)    |
-| Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |   Appendice E   |
+| Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |   ![Appendice E](EDA/PDF/exploration_number_of_reviews_variable.pdf)   |
 
 
 
-[9.63](Skewness:-9.63)
 
 
  
