@@ -58,7 +58,7 @@ The following table shows the result of the exploration analysis of numerical va
 | price             | 3.16     | 17.723   | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
 | Value price       | 3.13     | 17.56    | Inverted "L” | Many outliers to the left | Skewed to the right | Logarithmic          |
 
-
+![love](EDA/PDF/exploration_love.pdf)
 
 [9.63](Skewness:-9.63)
 
