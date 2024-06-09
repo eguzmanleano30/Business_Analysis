@@ -39,6 +39,8 @@ The Sephora dataset reveals 5082 significant missing values in two specific vari
 md.pattern(sephora[c("category", "number_of_reviews", "love", "price","value_price", "MarketingFlags", "online_only", "exclusive", "limited_edition", "limited_time_offer", "log_love", "log_price", "log_value_price", "log_number_of_reviews", "rating", "MarketingFlags_content")], rot = 45)
 ```
 
+**Pattern of missingness between variables in the Sephora data set**
+![MissingValues](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/5a49fd44-792e-403f-bb60-360ed5804c0d)
 
-![MissingValues](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/809b2845-5c76-42dd-b0b6-6c993a793ac4)
+
 
