@@ -72,14 +72,15 @@ On the other hand, the exploration of the “rating” variable reveals a near-n
    **_Transformation results of numerical variables._** 
 
 The following table illustrate the results of log transformation of the variables generated distributions that approximate normality, with minimal skewness and kurtosis observed. The transformed “love”, “price”, and “value price” variables exhibit symmetric distributions, as indicated by their histograms, density plots, QQ plots, and box plots. Similarly, the log-transformed “number of reviews” variable shows a distribution close to normal, with slight skewness to the left. For additional details on each transformed variable, refer to the respective appendices: Appendix F for log love variable, Appendix G for log price, Appendix H for log value price, and Appendix I for log number of reviews. 
+     
 
+| **Log transform. Variable** | **Skewness** | **Kurtosis** | **QQ Plot**                          | **Box Plot**                          | **Histogram**                 | **Plot and code** |
+| --------------------------- | ------------ | ------------ | ------------------------------------ | ------------------------------------- | ----------------------------- | ----------------- |
+| Log love                    | \-0.013      | 3.02         | Normal, tiny outliers                | Normal, outliers on both sides        | Normal                        | Appendix F         |
+| Log number of review        | \-0.39       | 3.02         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | Appendix G         |
+| Log price                   | \-0.39       | 3.28         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | Appendix H         |
+| Log value price             | \-0.19       | 2.34         | Normal, tiny outliers on top         | Normal, some outliers left            | Normal, slight skewness left  | Appendix I         |
 
-| Log transform. Variable | Skewness | Kurtosis | QQ Plot                              | Box Plot                              | Histogram                     |
-| ----------------------- | -------- | -------- | ------------------------------------ | ------------------------------------- | ----------------------------- |
-| Log love                | \-0.013  | 3.02     | Normal, tiny outliers                | Normal, outliers on both sides        | Normal                        |
-| Log number of review    | \-0.39   | 3.02     | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right |
-| Log price               | \-0.39   | 3.28     | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right |
-| Log value price         | \-0.19   | 2.34     | Normal, tiny outliers on top         | Normal, some outliers left            | Normal, slight skewness left  |
 
 
 
