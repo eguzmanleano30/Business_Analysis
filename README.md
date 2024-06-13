@@ -62,10 +62,26 @@ The following table shows the result of the exploration analysis of numerical va
 
 On the other hand, the exploration of the “rating” variable reveals a near-normal distribution with a slight left skewness. Values of 0 and empty strings were reclassified as NA to represent missing values accurately. Given its minimal skew and generally balanced distribution, no transformation is recommended, facilitating a straightforward analysis of the dataset's ratings 
 
+```{r}
+# Create a bar plot for rating variable without fixing missing values
+ggplot(sephora, aes(x = rating)) +
+    geom_bar()
+```
+
 **Histogram of rating variable without any changing**
 ![ rating_variable_without_any_changing](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/7b1a498a-f522-4456-9630-34cf51fa297d)
 
  
+```{r}
+# Replace 0 with NA in the rating column of sephora dataset 
+sephora$rating[sephora$rating == 0] <- NA
+sephora$rating[sephora$rating == ""] <- NA
+
+
+# Create a bar plot for rating variable with fixing missing values
+ggplot(sephora, aes(x = rating)) +
+    geom_bar()
+```
 
 **Histogram of rating variable with classification of missing values** 
 ![ rating_variable_with_classification_missing_value](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/7cd555df-d905-435e-8cc5-4283a30023a9)
@@ -89,10 +105,31 @@ The following table illustrate the results of log transformation of the variable
 
 The "Marketing Flags content" variable in the Sephora dataset denotes specific marketing flags linked to products on the website, like "online only," "exclusive," or "limited edition". These flags signify promotional aspects, aiding in understanding consumer preferences and Sephora's marketing strategies. Observations marked with "0" have been replaced with NA to denote missing data as illustrate the below figures 
 
-
+```{r}
+# Create a bar plot for MarketingFlags_content variable without filter missing values
+ggplot(sephora, aes(y = MarketingFlags_content)) +
+  geom_bar() +
+  coord_flip() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+  
 **Histogram of Marketing Flags Content variable without any changing**
 ![Histogram of Marketing Flags Content variable without any changing ](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/74d47e47-b884-4f94-8db4-b8cb5aad92a0)
 
+```{r}
+# Replace 0 with NA in the rating column of sephora dataset 
+sephora$MarketingFlags_content[sephora$MarketingFlags_content == 0 |
+sephora$MarketingFlags_content == 38 | sephora$MarketingFlags_content == 52 |
+sephora$MarketingFlags_content == 404 | sephora$MarketingFlags_content == 28 |
+sephora$MarketingFlags_content == 84] <- NA
+
+
+# Create a bar plot for rating variable with fixing missing values
+ggplot(sephora, aes(y = MarketingFlags_content)) +
+  geom_bar() +
+  coord_flip() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 **Histogram of Marketing Flags Content variable with classification of missing values**
 ![image](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/de02fb57-d4aa-43e3-84e0-3dd744b3256b)
 
