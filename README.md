@@ -83,8 +83,23 @@ The following table illustrate the results of log transformation of the variable
 | Log price                   | \-0.39       | 3.28         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | ![Appendix H](EDA/PDF/transformation_price.pdf)         |
 | Log value price             | \-0.19       | 2.34         | Normal, tiny outliers on top         | Normal, some outliers left            | Normal, slight skewness left  | ![Appendix I](EDA/PDF/transformation_value_price.pdf)       |
 
+### Exploration of binary variables.
+
+**_Marketing Flag content variable._**
+
+The "Marketing Flags content" variable in the Sephora dataset denotes specific marketing flags linked to products on the website, like "online only," "exclusive," or "limited edition". These flags signify promotional aspects, aiding in understanding consumer preferences and Sephora's marketing strategies. Observations marked with "0" have been replaced with NA to denote missing data as illustrate the below figures 
 
 
+**Histogram of Marketing Flags Content variable without any changing**
+![Histogram of Marketing Flags Content variable without any changing ](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/74d47e47-b884-4f94-8db4-b8cb5aad92a0)
+
+**Histogram of Marketing Flags Content variable with classification of missing values**
+![image](https://github.com/eguzmanleano30/Exploration_Data_Analisis/assets/172155030/de02fb57-d4aa-43e3-84e0-3dd744b3256b)
+
+
+**Exploration of remanent binary variables** 
+
+For the remaining binary variables in the Sephora dataset -- "online only," "exclusive," "limited edition," and "marketing flag" -- no observations were altered or replaced during the data preprocessing stage. These variables retain their original values as provided in the dataset. These binary indicators serve essential roles in delineating various aspects of product availability, exclusivity, and promotional status on Sephora's platform, contributing valuable insights into the marketing strategies and consumer engagement patterns within the cosmetics industry. 
 
 
 
