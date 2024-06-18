@@ -19,7 +19,7 @@ The following table shows the univariable logistic regression analysis on the Se
 | --------------------- | ------------- | -------------- | --------- | ------- | ------------------------------------------------- | --------------- |
 | Category              | 0             | 1.782 e3       | 0         | 1       | No significant association with online-only sales | ![Appendix](        |
 | Rating                | \- 0.083      | 0.0463         | \-1.801   | 0.0717  | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Rating.pdf)        |
-| limited edition       | 0.702         | 0.077          | 9.144     | 0       | Potential significance for online-only sales      | ![Appendix](        |
+| limited edition       | 0.702         | 0.077          | 9.144     | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_limited_edition.pdf)        |
 | Limited Edition Offer | \-10.384      | 113.719        | \-0.091   | 0.9275  | No significant association with online-only sales | ![Appendix](        |
 | Exclusive             | \-0.414       | 0.06026        | \-6.871   | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Exclusive.pdf)        |
 | MarketingFlag         | 19.54         | 156.68         | \-0.091   | 0.9     | No significant association with online-only sales | ![Appendix](        |
