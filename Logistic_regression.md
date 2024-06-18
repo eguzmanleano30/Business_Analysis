@@ -13,8 +13,7 @@ To build a logistic regression model, we will incorporate all independent variab
 The following table shows the univariable logistic regression analysis on the Sephora web platform dataset, revealing potential associations between various independent variables and online-only sales. Significant factors such as rating, limited edition, exclusive, log price, log value price, and log love may influence online sales, as is evident from their Wald test p-values below 0.25. In contrast, category, limited edition offers, and MarketingFlags show no significant associations with online-only sales.
 
 
-
-**Univariable results**
+**Univariable Analysis results**
 | Indepen. Variable     | Coeffic. (B1) | Standard Error | Wald Test | P-value | conclusion                                        | Output and code |
 | --------------------- | ------------- | -------------- | --------- | ------- | ------------------------------------------------- | --------------- |
 | Category              | 0             | 1.782 e3       | 0         | 1       | No significant association with online-only sales | ![Appendix](        |
@@ -27,9 +26,12 @@ The following table shows the univariable logistic regression analysis on the Se
 | Log Value Price       | 0.334         | 0.03506        | 9.544     | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Value_Price.pdf)        |
 | Log Love              | \-0.574       | 0.0193         | \-29.68   | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_love.pdf)        |
 
+### Multivariable Logistic Regression Model Analysis for Online-Only Sales Prediction at Sephora 
 
+Using several potential predictors, the multivariable logistic regression model was built to predict online-only sales at Sephora's website. The model equation indicates that limited edition, exclusive status, log price, log value price, and log love are considered predictors. The statistical summary reveals that limited edition, log price, and log value price have statistically significant coefficients, suggesting they may influence online-only sales. The intercept coefficient represents the log odds of online-only sales when all predictors are zero, which is 3.176. Overall, the model provides insights into the relative importance of various predictors in determining online-only sales for Sephora's products. 
 
-
+![Results of model wuith all predictor:](Logistic_Regression/model_with_all_predictors.pdf)
+ Log odd: G(online_only) = 3.176 + 0.421*limited_edition - 0.306 exclusive -0.907 Log_price + 0.95 Log_value_price - 0.551 Log_love 
 
 
 
