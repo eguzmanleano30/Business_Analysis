@@ -32,7 +32,7 @@ Using several potential predictors, the multivariable logistic regression model 
 
 Log odd: G(online_only) = 3.176 + 0.421*limited_edition - 0.306 exclusive -0.907 Log_price + 0.95 Log_value_price - 0.551 Log_love 
 
-![Results of model wuith all predictor:](Logistic_Regression/model_with_all_predictors.pdf)
+![Results of model with all predictor:](Logistic_Regression/model_with_all_predictors.pdf)
 
 
 
