@@ -49,10 +49,13 @@ Log odd: G(online_only) = 3.176 + 0.421*limited_edition - 0.306 exclusive -0.907
 The following table shows the iterative process of refining the multivariable model through stepwise elimination and assessment of likelihood ratio tests, which has provided insights into the predictors' significance for “online only” response. Predictors such as Log Love, Log Value Price, and Log Love have minimal impact on the model's performance, as evidenced by their elimination, which results in insignificant changes in deviance and confounder analyses. Therefore, the multivariable model is better than all reduced models. 
 
 
-
-
-
-
+|   | Likelihood Ratio Test (LR)  |   |   |   | Confounder Analysis  |   |   |
+| --------------- | ----------------- | --------- | ------- | -------------------------- | ----------------------------------------------------------------------------------- | -------------------- | --------------- |
+| **Variable Remove** | **Residual Deviance** | **LR G** | **P-value** | **Conclusion  <br>Full model** | **Δβ%**                                                                                 | **Conclusion**           | **Output and code** |
+| Log Love        | 9569.19           | 920.11    | 0       | Better model               | Limited Edition: 54.45  <br>Exclusive: 50.73 <br>Price: -6.77 <br>Value Price: 1.56 | Important confounder | ![Appendix]        |
+| Log Value Price | 9592.74           | 943.66    | 0       | Better model               | Limited Edition: 93.87 <br>Exclusive: 45.7  <br>Price: -126.48                      | Important confounder | ![Appendix]        |
+| Log Price       | 9635.28           | 986.2     | 0       | Better model               | Limited Edition: 99.96 <br>Exclusive: 73.06                                         | Important confounder | ![Appendix]        |
+| Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | ![Appendix]        |
 
 
 
