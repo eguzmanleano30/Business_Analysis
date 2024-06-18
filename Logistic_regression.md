@@ -52,10 +52,10 @@ The following table shows the iterative process of refining the multivariable mo
 |   | Likelihood Ratio Test (LR)  |   |   |   | Confounder Analysis  |   |   |
 | --------------- | ----------------- | --------- | ------- | -------------------------- | ----------------------------------------------------------------------------------- | -------------------- | --------------- |
 | **Variable Remove** | **Residual Deviance** | **LR G** | **P-value** | **Conclusion  <br>Full model** | **Δβ%**                                                                                 | **Conclusion**           | **Output and code** |
-| Log Love        | 9569.19           | 920.11    | 0       | Better model               | Limited Edition: 54.45  <br>Exclusive: 50.73 <br>Price: -6.77 <br>Value Price: 1.56 | Important confounder | ![Appendix]        |
-| Log Value Price | 9592.74           | 943.66    | 0       | Better model               | Limited Edition: 93.87 <br>Exclusive: 45.7  <br>Price: -126.48                      | Important confounder | ![Appendix]        |
-| Log Price       | 9635.28           | 986.2     | 0       | Better model               | Limited Edition: 99.96 <br>Exclusive: 73.06                                         | Important confounder | ![Appendix]        |
-| Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | ![Appendix]        |
+| Log Love        | 9569.19           | 920.11    | 0       | Better model               | Limited Edition: 54.45  <br>Exclusive: 50.73 <br>Price: -6.77 <br>Value Price: 1.56 | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_love.pdf)        |
+| Log Value Price | 9592.74           | 943.66    | 0       | Better model               | Limited Edition: 93.87 <br>Exclusive: 45.7  <br>Price: -126.48                      | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_value_price.pdf)        |
+| Log Price       | 9635.28           | 986.2     | 0       | Better model               | Limited Edition: 99.96 <br>Exclusive: 73.06                                         | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_price.pdf)        |
+| Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | ![Appendix](Logistic_Regression/Model_without_exclusive.pdf)        |
 
 
 
