@@ -58,6 +58,71 @@ The following table shows the iterative process of refining the multivariable mo
 | Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | ![Appendix](Logistic_Regression/Model_without_exclusive.pdf)        |
 
 
+### _The main effects of the preliminary model_ 
+
+Based on the graphs of the main effect model refinement, there appears to be a relationship between the logistic model and each predictor variable. The graph logit versus log price shows a positive relationship, suggesting that the log price variable increases the probability of the outcome of online-only sales. Similarly, the graph logit versus log value price exhibits a positive relationship, indicating that higher log value prices (price reduction) are associated with higher probabilities of online-only sales. In contrast, the graph logit versus log love reveals a negative relationship, implying that the increase in the number of users who have expressed affection or favorited a product on the Sephora platform (love) has decreased the probability of online-only sales. 
+
+**Main effects for log price**  
+
+```{r} 
+
+logit <- predict(preliminar.model)  
+analysisdat <- sephora[,c("limited_edition","exclusive","log_price", "log_value_price", "log_love", "online_only")]  
+
+dat <- analysisdat[complete.cases(analysisdat),]
+
+subset_data3 <- data.frame(dat$log_price, logit)
+
+plot(subset_data3)
+
+lines(lowess(subset_data3),col= 2)
+``` 
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/16b03686-94d3-4f2a-af9c-2f63cfcb1b32)
+
+
+**Main effect for log value price**
+
+```{r} 
+subset_data4 <- data.frame(dat$log_value_price, logit)  
+
+plot(subset_data4)  
+
+lines(lowess(subset_data4),col= 2) 
+``` 
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/0ede645f-2fe6-482e-84e9-c8be5f859239)
+
+
+**Main effects for log number of reviews**
+
+```{r} 
+subset_data6 <- data.frame(dat$log_love, logit)  
+
+plot(subset_data6)  
+
+lines(lowess(subset_data6),col= 2) 
+``` 
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/8503bed4-b64d-4a62-a459-bbf22597cdc0)
+
+
+**Interaction effect**
+
+The interaction analysis reveals significant relationships between predictor variables and their combined impact on online-only sales. The unique interaction that does not influence online-only sales is limited_edition vs. exclusive because it is not statistically significant. In contrast, the other interactions have demonstrated significant impacts on online-only sales. 
+
+
+**Result of interaction between predictors**
+
+| Interaction                         | Coeffic. | SE    | Z value | P-value   | Interaction effect | Output and code |
+| ----------------------------------- | -------- | ----- | ------- | --------- | ------------------ | --------------- |
+| limited_edition1 vs exclusive       | 0.115    | 0.174 | 0.663   | 0.507     | Not significant    | Appendix        |
+| limited_edition1 vs log_price       | 0.546    | 0.127 | 4.295   | 1.74e-05  | significant        | Appendix        |
+| limited_edition1 vs log_value_price | 0.556    | 0.122 | 4.539   | 5.65e-06  | significant        | Appendix        |
+| Exclusive1 vs log_price             | 0.445    | 0.099 | 4.513   | 6.38e-06  | significant        | Appendix        |
+| Exclusive1 vs log_value_price       | 0.447    | 0.095 | 4.709   | 2.49e-06  | significant        | Appendix        |
+| log_price vs log_value_price        | 0.277    | 0.035 | 7.991   | 1.34e -15 | significant        | Appendix        |
+| log_price vs log_love               | \-0.064  | 0.029 | \-2.231 | 0.026     | significant        | Appendix        |
+| log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | Appendix        |
 
 
 
