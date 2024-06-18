@@ -44,7 +44,9 @@ Log odd: G(online_only) = 3.176 + 0.421*limited_edition - 0.306 exclusive -0.907
 | log_love              | \-0.551     | 0.012          | \-27.861 | 0        |
 
 
+### Refinement of Multivariable Model 
 
+The following table shows the iterative process of refining the multivariable model through stepwise elimination and assessment of likelihood ratio tests, which has provided insights into the predictors' significance for “online only” response. Predictors such as Log Love, Log Value Price, and Log Love have minimal impact on the model's performance, as evidenced by their elimination, which results in insignificant changes in deviance and confounder analyses. Therefore, the multivariable model is better than all reduced models. 
 
 
 
