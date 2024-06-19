@@ -115,14 +115,14 @@ The interaction analysis reveals significant relationships between predictor var
 
 | Interaction                         | Coeffic. | SE    | Z value | P-value   | Interaction effect | Output and code |
 | ----------------------------------- | -------- | ----- | ------- | --------- | ------------------ | --------------- |
-| limited_edition1 vs exclusive       | 0.115    | 0.174 | 0.663   | 0.507     | Not significant    | Appendix        |
-| limited_edition1 vs log_price       | 0.546    | 0.127 | 4.295   | 1.74e-05  | significant        | Appendix        |
-| limited_edition1 vs log_value_price | 0.556    | 0.122 | 4.539   | 5.65e-06  | significant        | Appendix        |
-| Exclusive1 vs log_price             | 0.445    | 0.099 | 4.513   | 6.38e-06  | significant        | Appendix        |
-| Exclusive1 vs log_value_price       | 0.447    | 0.095 | 4.709   | 2.49e-06  | significant        | Appendix        |
-| log_price vs log_value_price        | 0.277    | 0.035 | 7.991   | 1.34e -15 | significant        | Appendix        |
-| log_price vs log_love               | \-0.064  | 0.029 | \-2.231 | 0.026     | significant        | Appendix        |
-| log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | Appendix        |
+| limited_edition1 vs exclusive       | 0.115    | 0.174 | 0.663   | 0.507     | Not significant    | ![Appendix](        |
+| limited_edition1 vs log_price       | 0.546    | 0.127 | 4.295   | 1.74e-05  | significant        | ![Appendix](        |
+| limited_edition1 vs log_value_price | 0.556    | 0.122 | 4.539   | 5.65e-06  | significant        | ![Appendix](        |
+| Exclusive1 vs log_price             | 0.445    | 0.099 | 4.513   | 6.38e-06  | significant        | ![Appendix](        |
+| Exclusive1 vs log_value_price       | 0.447    | 0.095 | 4.709   | 2.49e-06  | significant        | ![Appendix](        |
+| log_price vs log_value_price        | 0.277    | 0.035 | 7.991   | 1.34e -15 | significant        | ![Appendix](        |
+| log_price vs log_love               | \-0.064  | 0.029 | \-2.231 | 0.026     | significant        | ![Appendix](        |
+| log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | ![Appendix](        |
 
 
 
