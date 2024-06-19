@@ -125,7 +125,13 @@ The interaction analysis reveals significant relationships between predictor var
 | log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | ![Appendix](Logistic_Regression/interac_value_price_love.pdf)        |
 
 
+### Final model and validation. 
 
+The final logistic regression model highlights significant predictors of online sales at Sephora. Limited edition and exclusivity negatively influence online sales, while higher log price deters purchases. Conversely, log value price positively impacts online sales, indicating that perceived value drives purchases. Interactions between limited edition and log price and exclusivity and log price further reveal slight relationships. 
+
+Final log odd model: 
+
+g_(online_only) = 3.641-1.261 limited_edition -1.612 exclusive-0.974 log_price + 0.899 log_value_price -0.553 limited_edition * log_price +0.437 exclusive * log_price 
 
 
 
