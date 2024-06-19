@@ -137,7 +137,9 @@ The final logistic regression model highlights significant predictors of online 
 
 Final log odd model: 
 
-Logg odd: g_(online_only) = 3.641-1.261 limited_edition -1.612 exclusive-0.974 log_price + 0.899 log_value_price -0.553 limited_edition * log_price +0.437 exclusive * log_price 
+**Logg odd:**
+
+**g_(online_only) = 3.641-1.261 limited_edition -1.612 exclusive-0.974 log_price + 0.899 log_value_price -0.553 limited_edition * log_price +0.437 exclusive * log_price**
 
 **Statistical summary of finale log odd model**
 
