@@ -6,6 +6,12 @@ What factors drive customers to shop online instead of in-store at Sephora?
 ### Explanation of research question 
 This research question delves into the factors influencing customers’ purchase decisions between shopping online and in-store at Sephora. It seeks to identify the key product characteristics and customer preferences that lead individuals to shop online rather than visiting physical stores. 
 
+### Data information 
+The data was obtained from Kaggle that is an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry. 
+
+Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies.
+https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data
+
 ### Building a logistic regression model for products sold online only
 To build a logistic regression model, we will incorporate all independent variables. The aim is to predict the likelihood of a product being exclusively sold online on Sephora’s website. This model will enable Sephora to optimize its product assortment, marketing strategies, and distribution channels to maximize online sales and enhance overall profitability. Additionally, insights gained from the model can inform strategic decision-making and help Sephora stay competitive in the rapidly evolving e-commerce landscape. 
 
@@ -133,7 +139,14 @@ Final log odd model:
 
 Logg odd: g_(online_only) = 3.641-1.261 limited_edition -1.612 exclusive-0.974 log_price + 0.899 log_value_price -0.553 limited_edition * log_price +0.437 exclusive * log_price 
 
-![Statistical summary of final model with interaction effect](Logistic_Regression/final_model_with interaction.pdf)
+![Statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
+
+
+
+
+
+
+
 
 
 
