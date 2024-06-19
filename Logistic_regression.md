@@ -139,9 +139,61 @@ Final log odd model:
 
 Logg odd: g_(online_only) = 3.641-1.261 limited_edition -1.612 exclusive-0.974 log_price + 0.899 log_value_price -0.553 limited_edition * log_price +0.437 exclusive * log_price 
 
+**Statistical summary of finale log odd model**
+
+| Variables                  | coefficient | SE    | Z value  | p.value |
+| -------------------------- | ----------- | ----- | -------- | ------- |
+| Intercept                  | 3.641       | 0.250 | 14.554   | 0       |
+| limited_edition1           | \-1.261     | 0.502 | \-2.514  | 0.012   |
+| exclusive1                 | \-1.612     | 0.369 | \-4.365  | 0       |
+| log_price                  | \-0.974     | 0.243 | \-4.009  | 0       |
+| log_value_price            | 0.899       | 0.238 | 3.772    | 0       |
+| log_love                   | \-0.553     | 0.02  | \-27.844 | 0       |
+| limited_edition1:log_price | 0.437       | 0.130 | 3.354    | 0.001   |
+| exclusive1:log_price       | 0.364       | 0.101 | 3.586    | 0       |
+
 ![Statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
 
+### Validation of the final model 
 
+The validation of the final model reveals good results. The Hosmer-Lemeshow goodness of fit test yields a p-value of 0.1109, suggesting that the model adequately fits the data, suggesting there is no significant difference between observed and predicted outcomes. Furthermore, the high Pearson correlation coefficient of 0.965 indicates a strong correlation between observed and predicted probabilities, confirming the model's accuracy in predicting online sales for Sephora. 
+
+
+-  **Hosmer and Lemeshow goodness of fit (GOF) test data:**
+```{r} 
+dat$online_only <- as.numeric(dat$online_only)-1
+
+hosle_test <- hoslem.test(dat$online_only, fitted(final.model),g=10)
+
+hosle_test
+``` 
+
+X-squared = 13.027, df = 8, p-value = 0.1109 
+
+
+-   **Pearson test**
+```{r} 
+pr <- residuals(final.model,"pearson")
+
+sum_pr <- sum(pr^2)
+
+pearson <- round(1-pchisq(sum_pr, 9161),3)
+
+pearson
+``` 
+Pearson correlation coefficient = 0.965 
+
+### **_Outlier analysis_** 
+
+The Cook's distance plot does not show extreme data points that are influential in the final model, so we do not need to drop any observation into Sephora's data.
+
+**Plot residuals vs. fitted values with three influential point** 
+
+```{r} 
+plot(final.model, which = 4, id.n = 3)
+``` 
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/e2b4931f-10c0-4a2d-9332-f962f24426e0)
 
 
 
