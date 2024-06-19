@@ -24,4 +24,6 @@ Analyzing the log love correlations in the Sephora dataset highlights a few tren
 
  -  **Positive Correlation with rating:** A moderate positive correlation (0.34) with rating suggests that better-rated products are more loved, highlighting the value of product quality and satisfaction. 
 
+**Correlation Matrix of Sephora data with all predictors**  
 
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/905c9159-638f-4f66-be8d-82f14f22bce6)
