@@ -12,6 +12,17 @@ This research question investigates the factors contributing to the level of cus
 
 We will use a multiple linear regression model to examine what pushes customer love for Sephora's products. This approach allows us to assess how price, brand, marketing efforts, and customer reviews affect the love variable, which measures customer affection toward products. To analyze these variables together, the model will highlight the most significant influences of customer love, offering insights into practical strategies for enhancing product appeal on Sephora's platform. 
 
+
+```{r}
+# load data 
+sephora <- read.csv("./data/cosmetic/SecondSephoraClean.csv", header = TRUE)
+
+set.seed(123)  # Set a seed for reproducibility
+
+# Sample 5000 rows from ds_wfood_cols_us_nona
+sephoraData <- sample_n(sephora, 1000, replace = FALSE)
+```
+
 ### Correlation Analysis: The log love variable in Sephora data 
 
 Analyzing the log love correlations in the Sephora dataset highlights a few trends: 
@@ -26,4 +37,56 @@ Analyzing the log love correlations in the Sephora dataset highlights a few tren
 
 **Correlation Matrix of Sephora data with all predictors**  
 
+```{r}
+# Selecting all predictors
+totalVariable <- select(sephoraData, "log_love", "log_number_of_reviews", "log_price",
+                   "log_value_price", "rating", "online_only", "exclusive", "limited_edition", "limited_time_offer")
+
+# argument lab = TRUE
+ggcorrplot(round(cor(totalVariable), 3),
+           hc.order = TRUE,
+           type = "lower",
+           lab = TRUE)
+
+```
+
 ![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/905c9159-638f-4f66-be8d-82f14f22bce6)
+
+ 
+**Log love response correlation with all predictors** 
+
+| Variable 1             | Variable 2             | Correlation |
+| --------------------- | --------------------- | ----------- |
+|   | Log price             | \-0.18      |
+|   | Log value price       | \-0.2       |
+| **Log love**  | Log number of reviews | 0.84        |
+|   | rating                | 0.34        |
+|   | Online only sales     | \-0.38      |
+|   | Exclusive             | 0.12        |
+|   | Limited edition       | \-0.11      |
+
+
+### L.I.N.E.  assumption diagnostic for numerical variables 
+
+### Diagnostic of linearity and independence assumptions 
+
+The linearity assumption test results for multiple linear regression of Sephora data suggest no evident pattern observed in the residuals versus predictors and residuals versus fitted values plots for the log value price, log price, and rating predictors, indicating no violation of linearity assumptions. However, for the log number of reviews predictor, a clear U-shaped pattern is observable in both plots, indicating a violation of the linearity assumption. 
+
+On the other hand, examining the independence assumption revealed consistent outcomes across predictors. Each predictor, including log value price, log price, log number of reviews, and rating, exhibited random cloud patterns in the residuals versus order plots. This randomness suggests no systematic relationship between residuals and the order of observations. Therefore, it’s indicated no violation of the independence assumption for any of the predictors. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
