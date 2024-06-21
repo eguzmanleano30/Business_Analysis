@@ -76,8 +76,13 @@ On the other hand, examining the independence assumption revealed consistent out
 
 
 
-
-
+|   | Linearity assumption  |   |   | Independence assumption  |   |   |  
+| --------------------- | --------------------- | -------------------------- | ---------------- | ------------------ | ------------ | --------------- |
+|  **<br>Predictor**        | **Residual vs predictor** | **Residual vs. fitted values** | **Conclusion**       | **Residual vs. order** | **Conclusion**   | **Output and code** |
+| Log value price       | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
+| Log price             | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
+| Log number of reviews | U pattern             | U pattern                  | Violation        | Random cloud       | No violation | Appendix        |
+| Rating                | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
 
 
 
