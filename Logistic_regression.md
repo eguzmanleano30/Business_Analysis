@@ -1,28 +1,17 @@
 ## Logistic Regression Analysis for Online Shopping Preferences 
 
+**_Note:_**
+_Sephora data was obtained from Kaggle that is an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry._
+_Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data_
+
 ### Research questions: 
 What factors drive customers to shop online instead of in-store at Sephora? 
 
 ### Explanation of research question 
 This research question delves into the factors influencing customers’ purchase decisions between shopping online and in-store at Sephora. It seeks to identify the key product characteristics and customer preferences that lead individuals to shop online rather than visiting physical stores. 
 
-### Data information 
-The data was obtained from Kaggle that is an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry. 
-
-Methodology: Multiple Linear Regression for the Sephora Project 
-
-We will employ multiple linear regression as our primary analytical tool to respond to the second question: Which factors influence the degree of customer affinity towards products available on Sephora's website? This methodology will help to analyze the factors influencing customer love for products sold on Sephora's website. Likewise, it allows us to examine the relationship between multiple predictor variables and the outcome variable, which is the level of customer love. 
-
-Data Collection and Preparation: 
-
-We will employ the outcomes derived from the Exploration Data Analysis (EDA) methodology to manage this part. Our approach will involve gathering data from Sephora's website, diligently cleaning and preprocessing it to handle missing values and outliers, and rigorously ensuring consistency across variables. 
-
-Selection of Predictor Variables: 
-
-We will select the predictor variables likely to impact the "love " response variable. These variables may include product attributes such as brand, category, ingredients, formulation, customer reviews and ratings, product price, promotional offers and discounts, product popularity and trendiness, seasonality, and special events. The regression model will include variables that are expected to have a significant impact on customer love. However, highly correlated variables will be evaluated carefully to avoid multicollinearity issues (Kutner, 2005). 
-
-Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies.
-https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data
+### Logistic Regression Analysis for Online Shopping Preferences 
+The upcoming project phase will involve the construction of a Logistic Regression model to address our research question. As the outcome variable is binary (online shopping vs. in-store shopping), Logistic Regression is the most suitable model to estimate the probability of a customer shopping online based on various predictor variables.
 
 ### Building a logistic regression model for products sold online only
 To build a logistic regression model, we will incorporate all independent variables. The aim is to predict the likelihood of a product being exclusively sold online on Sephora’s website. This model will enable Sephora to optimize its product assortment, marketing strategies, and distribution channels to maximize online sales and enhance overall profitability. Additionally, insights gained from the model can inform strategic decision-making and help Sephora stay competitive in the rapidly evolving e-commerce landscape. 
