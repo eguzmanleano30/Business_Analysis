@@ -203,9 +203,9 @@ kable_classic_2(full_width = F)
 
 ### Model refinement and selection 
 
-The analysis of the Sephora data using linear regression explored various models to determine which factors most significantly influence customer affection, as measured by the love variable. Two criteria, Ra^2 (adjusted R-squared) and Cp (Mallow's Cp), were employed to assess model performance. Among the models tested, model six was identified as optimal according to both criteria. This model incorporates six predictors: rating, log number of reviews, log price, log value price, exclusivity, and limited edition. It achieved an adjusted R-squared of 0.730 and a Cp value of 7, suggesting it has substantial explanatory power while effectively balancing complexity and fit. This comprehensive approach ensures that the selected model provides a robust framework for understanding the dynamics of customer preferences on Sephora’s platform.
+The analysis of the Sephora data using linear regression explored various models to determine which factors most significantly influence customer affection, as measured by the love variable. Two criteria, $R^2_a$ (adjusted R-squared) and $C_p$ (Mallow's Cp), were employed to assess model performance. Among the models tested, model six was identified as optimal according to both criteria. This model incorporates six predictors: rating, log number of reviews, log price, log value price, exclusivity, and limited edition. It achieved an adjusted R-squared of 0.730 and a Cp value of 7, suggesting it has substantial explanatory power while effectively balancing complexity and fit. This comprehensive approach ensures that the selected model provides a robust framework for understanding the dynamics of customer preferences on Sephora’s platform.
 
-**Result of examination of all best models using Ra2 criterion**  
+**Result of examination of all best models using $R^2_a$ criterion**  
 
 ```{r}
 # Create a design matrix with variables VA1, VA7, and VA10
@@ -234,14 +234,16 @@ kable_classic_2(full_width = F)
 | 1             | FALSE  | TRUE  | FALSE  | FALSE  | FALSE  | FALSE  | 2                     | 0.707  |
 
 
+**Result of examination of all best models using $C_p$ criterion** 
 
-X^2^
-
-
-$R^2_a$
-
-
-
+| Num of model  | X1     | X2    | X3     | X4     | X5     | X6     | Number of predictors  | Cp     |
+|---------------|--------|-------|--------|--------|--------|--------|-----------------------|--------|
+| 6             | TRUE   | TRUE  | TRUE   | TRUE   | TRUE   | TRUE   | 7                     | 7.00   |
+| 5             | TRUE   | TRUE  | TRUE   | FALSE  | TRUE   | TRUE   | 6                     | 10.38  |
+| 4             | FALSE  | TRUE  | TRUE   | FALSE  | TRUE   | TRUE   | 5                     | 19.73  |
+| 3             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | TRUE   | 4                     | 30.25  |
+| 2             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | FALSE  | 3                     | 42.24  |
+| 1             | FALSE  | TRUE  | FALSE  | FALSE  | FALSE  | FALSE  | 2                     | 88.89  |
 
 
 
