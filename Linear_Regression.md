@@ -155,14 +155,27 @@ The t-test analysis for the influence of categorical variables on Sephora data d
 | Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | ![Appendix](Linear_Regression/Analisis_of_limited_time_offer.pdf)        |
 
 
+### Predictors selected to build linear regression model
+
+The selection of six predictors for the linear regression model analyzing log love in Sephora data —rating, number of reviews, log price, log value price, exclusive, and limited edition— is based on their statistical significance and relevance, as supported by LINE assumption analysis for numerical variables, and the t-test for categorical variables. 
 
 
+```{r}
+# Select numerical variables 
+variablesSelecting <- select(sephoraData, "rating", "log_number_of_reviews", "log_price", "log_value_price", "exclusive", "limited_edition","log_love")
 
 
+# Create pairs plot using ggpairs
+ggpairs(variablesSelecting)
+```
+**Correlation with all predictors selected**
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/78d90195-bca6-43ee-95c8-0acdb2f05371)
 
 
+**Preliminary model:** 
 
-
+**log(love)** = 5.871+ 0.088*rating + 0.684*log(number_of_reviews) - 0.806*Log(price) +   0.659*Log(value_price) +0.309*exclusive + 0.283*limited_edition 
 
 
 
