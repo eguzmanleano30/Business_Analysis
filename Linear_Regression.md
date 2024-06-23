@@ -177,9 +177,27 @@ ggpairs(variablesSelecting)
 
 **log(love)** = 5.871+ 0.088*rating + 0.684*log(number_of_reviews) - 0.806*Log(price) +   0.659*Log(value_price) +0.309*exclusive + 0.283*limited_edition 
 
+**Summary of preliminary model**
 
+```{r}
+# Fit linear regression model
+preli_model2 <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + factor(exclusive) + factor(limited_edition), data = sephoraData)
 
+sum_preliminar.model <- tidy(preli_model2)
 
+kbl(sum_preliminar.model) %>%
+kable_classic_2(full_width = F)
+```
+
+|                        | Coefficient  | SE     | z       | p.value  |
+|------------------------|--------------|--------|---------|----------|
+| (Intercept)            | 5.871        | 0.182  | 32.310  | 0.000    |
+| rating                 | 0.088        | 0.026  | 3.361   | 0.001    |
+| log_number_of_reviews  | 0.684        | 0.015  | 45.563  | 0.000    |
+| log_price              | -0.806       | 0.289  | -2.793  | 0.005    |
+| log_value_price        | 0.659        | 0.284  | 2.320   | 0.021    |
+| exclusive              | 0.309        | 0.061  | 5.102   | 0.000    |
+| limited_edition        | 0.283        | 0.103  | 2.747   | 0.006    |
 
 
 
