@@ -89,13 +89,17 @@ On the other hand, examining the independence assumption revealed consistent out
 Based on the analysis of the normality assumption – as illustrated in the following table -- for the numerical variables in Sephora data, it can be concluded that most predictors satisfy the normality assumption. Indeed, log value price, and log price rating variables exhibit straight diagonal lines in their QQ plots, indicating conformity to a normal distribution. Correspondingly, their histograms display a normal distribution pattern, with some outliers on the left side of the boxplot. The Shapiro-Wilks tests for these predictors failed to reject the null hypothesis, with p-values of 0.243, 0.224, and 0.204, confirming that errors are normally distributed. Therefore, there is no violation of the normality assumption. However, for the log number of reviews, the QQ plot shows an outlier down the line and slight skewness to the right in the histogram, with some outliers mainly on the right side of the boxplot. The Shapiro-Wilks test rejected the null hypothesis with a very low p-value, indicating that errors are not normally distributed. Therefore, this is a violation of the assumption of normality.
 
 **Result of diagnostics of normality assumption**
-|                        | Normality assumption    |                               |                                      |                                                                  |                |
-|------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|
-| **Predictor**              | **QQ plot**                 | **Histogram**                     | **Boxplot**                              | **Shapiro-Wilks test**                                               | **Conclusion**     |
-| Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  |
-| Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  |
-| Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      |
-| Rating                 | straight diagonal line  | Norm. Ditribu.                | some outliers to the left and right  | Fail reject Hop-value: 0.204  Errors are normally distributed    | No. violation  |
+
+|                        | Normality assumption    |                               |                                      |                                                                  |                |                 |
+|------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|-----------------|
+| **Predictor**              | **QQ plot**                 | **Histogram**                     | **Boxplot**                              | **Shapiro-Wilks test**                                               | **Conclusion**     | **Output and code** |
+| Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_value_price.pdf)        |
+| Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_price.pdf)        |
+| Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      | ![Appendix](Linear_Regression/Normality_numb_of_review.pdf)        |
+| Rating                 | straight diagonal line  | Norm. Ditribu.                | some outliers to the left and right  | Fail reject Hop-value: 0.204  Errors are normally distributed    | No. violation  | ![Appendix](Linear_Regression/Normality_rating.pdf)        |
+
+
+
 
 
 ### Diagnostics of equal variance assumption for predictors 
