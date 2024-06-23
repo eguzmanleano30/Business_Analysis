@@ -149,10 +149,10 @@ The t-test analysis for the influence of categorical variables on Sephora data d
 
 | Predictor           | T*    | T    | p-value  | T-test                                 | Conclusion           | Output and code |
 |---------------------|-------|------|----------|----------------------------------------|----------------------|-----------------|
-| Online only         | 12.97 | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
-| exclusive           | 3.38  | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
-| Limited edition     | 352   | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
-| Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | Appendix        |
+| Online only         | 12.97 | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_online_only_variable.pdf)        |
+| exclusive           | 3.38  | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_exclusive_variable.pdf)        |
+| Limited edition     | 352   | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_limited_edition_variable.pdf)        |
+| Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | ![Appendix](Linear_Regression/Analisis_of_limited_time_offer.pdf)        |
 
 
 
