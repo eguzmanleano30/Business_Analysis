@@ -118,9 +118,8 @@ Based on the analysis of the normality assumption – as illustrated in the foll
 
 **Result of diagnostics of normality assumption**
 
-|                        | Normality assumption    |                               |                                      |                                                                  |                |                 |
+| Predictor              | QQ plot                 | Histogram                     | Boxplot                              | Shapiro-Wilks test                                               | Conclusion     | Output and code |
 |------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|-----------------|
-| **Predictor**              | **QQ plot**                 | **Histogram**                     | **Boxplot**                              | **Shapiro-Wilks test**                                               | **Conclusion**     | **Output and code** |
 | Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_value_price.pdf)        |
 | Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_price.pdf)        |
 | Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      | ![Appendix](Linear_Regression/Normality_numb_of_review.pdf)        |
@@ -128,14 +127,18 @@ Based on the analysis of the normality assumption – as illustrated in the foll
 
 
 
-
-
 ### Diagnostics of equal variance assumption for predictors 
 
 The equal variance assumption for the numerical variables – as shown in the following table -- in the Sephora dataset presents mixed results. The scatter plots show random clouds for comparisons against predictors and residuals for log value price. Levene’s Test results in a failure to reject the null hypothesis with high p-values (0.789 and 0.457), indicating constant error variance and no assumption violation. However, the assumption encounters issues with the log number of reviews and ratings. Both variables show U-shaped patterns in their residual plots, suggesting non-constant variance across values. This observation is confirmed by Levene’s Test, which rejects the null hypothesis for both (p-values of 0.002 and 5.379e-06, respectively), indicating a clear violation of the equal variance assumption for these predictors. 
 
+**Result of diagnostic of equal variance assumption**
 
-
+|   Predictor            | Log love vs Predictor  | Residual vs predictor  | Levene’s Test                                                | Conclusion    | Output and code |
+|------------------------|------------------------|------------------------|--------------------------------------------------------------|---------------|-----------------|
+| Log value price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.789  Error variance is constant   | No violation  | ![Appendix](Linear_Regression/equal_variance_value_price.pdf)        |
+| Log price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.457  Error variance is constant   | No violation  | ![Appendix](Linear_Regression/equal_variance_price.pdf)        |
+| Log number of reviews  | Random cloud           | U shape                | reject Ho  P-value: 0.002  Error variance is constant        | Violation     | ![Appendix](Linear_Regression/equal_variance_numb_of_review.pdf)        |
+| Rating                 | U shape                | U shape                | reject HoP-value: 5.379e-06  Error variance is not constant  | Violation     | ![Appendix](Linear_Regression/equal_variance_rating.pdf)        |
 
 
 
