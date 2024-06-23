@@ -177,6 +177,7 @@ ggpairs(variablesSelecting)
 
 **log(love)** = 5.871+ 0.088*rating + 0.684*log(number_of_reviews) - 0.806*Log(price) +   0.659*Log(value_price) +0.309*exclusive + 0.283*limited_edition 
 
+
 **Summary of preliminary model**
 
 ```{r}
@@ -200,7 +201,9 @@ kable_classic_2(full_width = F)
 | limited_edition        | 0.283        | 0.103  | 2.747   | 0.006    |
 
 
+### Model refinement and selection 
 
+The analysis of the Sephora data using linear regression explored various models to determine which factors most significantly influence customer affection, as measured by the love variable. Two criteria, Ra^2 (adjusted R-squared) and Cp (Mallow's Cp), were employed to assess model performance. Among the models tested, model six was identified as optimal according to both criteria. This model incorporates six predictors: rating, log number of reviews, log price, log value price, exclusivity, and limited edition. It achieved an adjusted R-squared of 0.730 and a Cp value of 7, suggesting it has substantial explanatory power while effectively balancing complexity and fit. This comprehensive approach ensures that the selected model provides a robust framework for understanding the dynamics of customer preferences on Sephora’s platform.
 
 
 
