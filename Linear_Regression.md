@@ -79,10 +79,10 @@ On the other hand, examining the independence assumption revealed consistent out
 |   | Linearity assumption  |   |   | Independence assumption  |   |   |  
 | --------------------- | --------------------- | -------------------------- | ---------------- | ------------------ | ------------ | --------------- |
 |  **<br>Predictor**        | **Residual vs predictor** | **Residual vs. fitted values** | **Conclusion**       | **Residual vs. order** | **Conclusion**   | **Output and code** |
-| Log value price       | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
-| Log price             | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
-| Log number of reviews | U pattern             | U pattern                  | Violation        | Random cloud       | No violation | Appendix        |
-| Rating                | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | Appendix        |
+| Log value price       | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Value_price_lineari_Independ.pdf)        |
+| Log price             | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Price_lineari_Independ.pdf)        |
+| Log number of reviews | U pattern             | U pattern                  | Violation        | Random cloud       | No violation | ![Appendix](Linear_Regression/number_review_lineari_Independ.pdf)        |
+| Rating                | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Rating_lineari_Independ.pdf)        |
 
 
 
