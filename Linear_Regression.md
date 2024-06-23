@@ -47,10 +47,38 @@ ggcorrplot(round(cor(totalVariable), 3),
            hc.order = TRUE,
            type = "lower",
            lab = TRUE)
-
 ```
 
 ![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/905c9159-638f-4f66-be8d-82f14f22bce6)
+
+```{r}
+# Calculate the correlation matrix
+correlation_matrix <- cor(sephoraNum)
+
+# Get the row and column indices for the lower triangle
+lower_triangle_indices <- which(lower.tri(correlation_matrix), arr.ind = TRUE)
+
+# Extract the lower triangle of the correlation matrix along with variable names
+lower_triangle <- correlation_matrix[lower_triangle_indices]
+
+# Get the variable names corresponding to the lower triangle
+row_names <- rownames(correlation_matrix)[lower_triangle_indices[, 1]]
+col_names <- colnames(correlation_matrix)[lower_triangle_indices[, 2]]
+
+# Create a data frame to display the lower triangle with variable names
+lower_triangle_df <- data.frame(Variable1 = row_names,
+                                Variable2 = col_names,
+                                Correlation = lower_triangle)
+
+# Sort the lower triangle data frame by variable 1 in ascending order
+sorted_lower_triangle_df <- lower_triangle_df[order(lower_triangle_df$Variable2), ]
+
+# table the correlation
+kbl(sorted_lower_triangle_df) %>%
+kable_classic_2(full_width = F)
+```
+
+
 
  
 **Log love response correlation with all predictors** 
