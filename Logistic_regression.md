@@ -155,7 +155,7 @@ Final log odd model:
 | limited_edition1:log_price | 0.437       | 0.130 | 3.354    | 0.001   |
 | exclusive1:log_price       | 0.364       | 0.101 | 3.586    | 0       |
 
-![Statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
+![Plot and code of statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
 
 ### Validation of the final model 
 
