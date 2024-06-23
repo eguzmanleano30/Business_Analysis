@@ -74,8 +74,7 @@ The linearity assumption test results for multiple linear regression of Sephora 
 
 On the other hand, examining the independence assumption revealed consistent outcomes across predictors. Each predictor, including log value price, log price, log number of reviews, and rating, exhibited random cloud patterns in the residuals versus order plots. This randomness suggests no systematic relationship between residuals and the order of observations. Therefore, it’s indicated no violation of the independence assumption for any of the predictors. 
 
-
-
+**Results of diagnostics of linearity and independence assumptions**
 |   | Linearity assumption  |   |   | Independence assumption  |   |   |  
 | --------------------- | --------------------- | -------------------------- | ---------------- | ------------------ | ------------ | --------------- |
 |  **<br>Predictor**        | **Residual vs predictor** | **Residual vs. fitted values** | **Conclusion**       | **Residual vs. order** | **Conclusion**   | **Output and code** |
@@ -89,7 +88,7 @@ On the other hand, examining the independence assumption revealed consistent out
 
 Based on the analysis of the normality assumption – as illustrated in the following table -- for the numerical variables in Sephora data, it can be concluded that most predictors satisfy the normality assumption. Indeed, log value price, and log price rating variables exhibit straight diagonal lines in their QQ plots, indicating conformity to a normal distribution. Correspondingly, their histograms display a normal distribution pattern, with some outliers on the left side of the boxplot. The Shapiro-Wilks tests for these predictors failed to reject the null hypothesis, with p-values of 0.243, 0.224, and 0.204, confirming that errors are normally distributed. Therefore, there is no violation of the normality assumption. However, for the log number of reviews, the QQ plot shows an outlier down the line and slight skewness to the right in the histogram, with some outliers mainly on the right side of the boxplot. The Shapiro-Wilks test rejected the null hypothesis with a very low p-value, indicating that errors are not normally distributed. Therefore, this is a violation of the assumption of normality.
 
-
+**Result of diagnostics of normality assumption**
 |                        | Normality assumption    |                               |                                      |                                                                  |                |
 |------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|
 | Predictor              | QQ plot                 | Histogram                     | Boxplot                              | Shapiro-Wilks test                                               | Conclusion     |
