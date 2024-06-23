@@ -141,6 +141,45 @@ The equal variance assumption for the numerical variables – as shown in the fo
 | Rating                 | U shape                | U shape                | reject HoP-value: 5.379e-06  Error variance is not constant  | Violation     | ![Appendix](Linear_Regression/equal_variance_rating.pdf)        |
 
 
+### Analysis of categorical variables 
+
+The t-test analysis for the influence of categorical variables on Sephora data demonstrates significant results for most variables, suggesting they should not be excluded from the linear regression model. The predictors "Online only," "Exclusive," and "Limited edition" give t-values (12.97, 3.38, and 3.52, respectively) that significantly exceed the critical value of 1.65. Their p-values indicate a solid rejection of the null hypothesis (all p-values are 0). This suggests that these variables have a statistically significant impact on the dependent variable and should be included in the model. Contrarily, the "Limited time offer" variable, with a t-value of 0.38 and a p-value of 0.703, fails to reject the null hypothesis, suggesting it does not significantly affect the dependent variable. Therefore, it can be excluded from further modeling. 
+
+**T-test result for categorical variables**
+
+| Predictor           | T*    | T    | p-value  | T-test                                 | Conclusion           | Output and code |
+|---------------------|-------|------|----------|----------------------------------------|----------------------|-----------------|
+| Online only         | 12.97 | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
+| exclusive           | 3.38  | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
+| Limited edition     | 352   | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | Appendix        |
+| Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | Appendix        |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
