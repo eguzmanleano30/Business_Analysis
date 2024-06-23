@@ -175,6 +175,16 @@ ggpairs(variablesSelecting)
 
 **Preliminary model:** 
 
+```{r}
+# Fit linear regression model
+preli_model2 <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + factor(exclusive) + factor(limited_edition), data = sephoraData)
+
+sum_preliminar.model <- tidy(preli_model2)
+
+kbl(sum_preliminar.model) %>%
+kable_classic_2(full_width = F)
+```
+
 **log(love)** = 5.871+ 0.088*rating + 0.684*log(number_of_reviews) - 0.806*Log(price) +   0.659*Log(value_price) +0.309*exclusive + 0.283*limited_edition 
 
 
@@ -234,7 +244,23 @@ kable_classic_2(full_width = F)
 | 1             | FALSE  | TRUE  | FALSE  | FALSE  | FALSE  | FALSE  | 2                     | 0.707  |
 
 
+
 **Result of examination of all best models using $C_p$ criterion** 
+
+```{r}
+Cp <- leaps(x = x, y = sephoraData$log_love,
+             method = "Cp", nbest = 1)
+
+#re-organize results and sort by lowest Cp value
+Cp_table <- data.frame(Cp$which, 
+                       num_in_model = Cp$size - 1,
+                       p = Cp$size,
+                       Cp = Cp$Cp) %>% 
+  arrange(Cp)
+
+kbl(Cp_table) %>%
+kable_classic_2(full_width = F)
+```
 
 | Num of model  | X1     | X2    | X3     | X4     | X5     | X6     | Number of predictors  | Cp     |
 |---------------|--------|-------|--------|--------|--------|--------|-----------------------|--------|
@@ -244,6 +270,46 @@ kable_classic_2(full_width = F)
 | 3             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | TRUE   | 4                     | 30.25  |
 | 2             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | FALSE  | 3                     | 42.24  |
 | 1             | FALSE  | TRUE  | FALSE  | FALSE  | FALSE  | FALSE  | 2                     | 88.89  |
+
+
+**Result of examination of all best models using $C_p$ criterion**
+
+```{r}
+regfit.full <- regsubsets(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition , data = sephoraData)
+
+plot(regfit.full, scale = "Cp")
+```
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/4716ee19-9ff7-40f7-bb8b-e30a1adebf59)
+
+
+**Preliminary final model:**
+
+```{r}
+sephoraData <- sephoraData %>% 
+  mutate(exclusive = factor(exclusive))
+
+sephoraData <- sephoraData %>% 
+  mutate(limited_edition = factor(limited_edition))
+
+# Fit linear regression model
+preli_model3 <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition, data = sephoraData)
+
+sum_preliminar.model3 <- tidy(preli_model3)
+```
+
+**log(love)** = 5.871+0.088*rating + 0.684*log(number_of_reviews) +-0.806*Log(price) + + 0.659*Log(value_price)+0.309*exclusive + 0.283*limited_edition 
+
+
+
+**Relationship between log love response variable and its predictors** 
+
+```{r}
+regfit.full <- regsubsets(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition , data = sephoraData)
+
+plot(regfit.full, scale = "Cp")
+```
+
 
 
 
