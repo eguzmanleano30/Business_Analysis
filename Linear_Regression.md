@@ -12,7 +12,7 @@ This research question investigates the factors contributing to the level of cus
 
 We will use a multiple linear regression model to examine what pushes customer love for Sephora's products. This approach allows us to assess how price, brand, marketing efforts, and customer reviews affect the love variable, which measures customer affection toward products. To analyze these variables together, the model will highlight the most significant influences of customer love, offering insights into practical strategies for enhancing product appeal on Sephora's platform. 
 
-
+**Getting a sample of Sephora's data**
 ```{r}
 # load data 
 sephora <- read.csv("./data/cosmetic/SecondSephoraClean.csv", header = TRUE)
