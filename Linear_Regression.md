@@ -91,14 +91,16 @@ Based on the analysis of the normality assumption – as illustrated in the foll
 **Result of diagnostics of normality assumption**
 |                        | Normality assumption    |                               |                                      |                                                                  |                |
 |------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|
-| Predictor              | QQ plot                 | Histogram                     | Boxplot                              | Shapiro-Wilks test                                               | Conclusion     |
+| **Predictor**              | **QQ plot**                 | **Histogram**                     | **Boxplot**                              | **Shapiro-Wilks test**                                               | **Conclusion**     |
 | Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  |
 | Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  |
 | Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      |
 | Rating                 | straight diagonal line  | Norm. Ditribu.                | some outliers to the left and right  | Fail reject Hop-value: 0.204  Errors are normally distributed    | No. violation  |
 
 
+### Diagnostics of equal variance assumption for predictors 
 
+The equal variance assumption for the numerical variables – as shown in the following table -- in the Sephora dataset presents mixed results. The scatter plots show random clouds for comparisons against predictors and residuals for log value price. Levene’s Test results in a failure to reject the null hypothesis with high p-values (0.789 and 0.457), indicating constant error variance and no assumption violation. However, the assumption encounters issues with the log number of reviews and ratings. Both variables show U-shaped patterns in their residual plots, suggesting non-constant variance across values. This observation is confirmed by Levene’s Test, which rejects the null hypothesis for both (p-values of 0.002 and 5.379e-06, respectively), indicating a clear violation of the equal variance assumption for these predictors. 
 
 
 
