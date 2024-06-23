@@ -205,17 +205,40 @@ kable_classic_2(full_width = F)
 
 The analysis of the Sephora data using linear regression explored various models to determine which factors most significantly influence customer affection, as measured by the love variable. Two criteria, Ra^2 (adjusted R-squared) and Cp (Mallow's Cp), were employed to assess model performance. Among the models tested, model six was identified as optimal according to both criteria. This model incorporates six predictors: rating, log number of reviews, log price, log value price, exclusivity, and limited edition. It achieved an adjusted R-squared of 0.730 and a Cp value of 7, suggesting it has substantial explanatory power while effectively balancing complexity and fit. This comprehensive approach ensures that the selected model provides a robust framework for understanding the dynamics of customer preferences on Sephora’s platform.
 
+**Result of examination of all best models using Ra2 criterion**  
+
+```{r}
+# Create a design matrix with variables VA1, VA7, and VA10
+x <- sephoraData[, c("rating", "log_number_of_reviews", "log_price", "log_value_price", "exclusive", "limited_edition")]
+
+# Perform stepwise variable selection using leaps
+Ra2 <- leaps(x = x, y = sephoraData$log_love, method = "adjr2", nbest = 1)
+
+Ra2_table <- data.frame(Ra2$which, num_in_model = Ra2$size - 1, 
+                        p = Ra2$size,
+                        adjr2 = Ra2$adjr2) %>% 
+  arrange(desc(adjr2))
+
+kbl(Ra2_table) %>%
+kable_classic_2(full_width = F)
+```
+
+
+| Num of model  | X1     | X2    | X3     | X4     | X5     | X6     | Number of predictors  | adjr2  |
+|---------------|--------|-------|--------|--------|--------|--------|-----------------------|--------|
+| 6             | TRUE   | TRUE  | TRUE   | TRUE   | TRUE   | TRUE   | 7                     | 0.730  |
+| 5             | TRUE   | TRUE  | TRUE   | FALSE  | TRUE   | TRUE   | 6                     | 0.729  |
+| 4             | FALSE  | TRUE  | TRUE   | FALSE  | TRUE   | TRUE   | 5                     | 0.726  |
+| 3             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | TRUE   | 4                     | 0.723  |
+| 2             | FALSE  | TRUE  | FALSE  | FALSE  | TRUE   | FALSE  | 3                     | 0.72   |
+| 1             | FALSE  | TRUE  | FALSE  | FALSE  | FALSE  | FALSE  | 2                     | 0.707  |
 
 
 
+X^2^
 
 
-
-
-
-
-
-
+$R^2_a$
 
 
 
