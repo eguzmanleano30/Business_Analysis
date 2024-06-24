@@ -9,9 +9,11 @@ The main objective of this project is to develop an understanding of the require
 
 The purpose is to demonstrate that the SWOT methodology could be a helpful tool for developing a business strategy from complex data that personal care and beauty retailers seek.  
 
-**_Note:_**
-_Sephora data was obtained from Kaggle that is an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry._
-_Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data_
+### Information of Company
+Sephora is a globally renowned multinational chain specializing in beauty and personal care products with a robust foothold, particularly within the U.S. market. Famous for its expansive online platform, Sephora has effectively capitalized on e-commerce trends, offering customers a seamless shopping experience and various products. Moreover, Sephora's innovative approach incorporates customer feedback mechanisms, allowing users to rate and endorse products, fostering a sense of community and trust among its clients
+https://en.wikipedia.org/wiki/Sephora
+
+The Sephora Website data was obtained from Kaggle, an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry. Sephora's data – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data
 
 ## Formulation of questions about the requirements of clients: 
 
