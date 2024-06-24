@@ -305,10 +305,56 @@ sum_preliminar.model3 <- tidy(preli_model3)
 **Relationship between log love response variable and its predictors** 
 
 ```{r}
-regfit.full <- regsubsets(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition , data = sephoraData)
-
-plot(regfit.full, scale = "Cp")
+avPlots(preli_model3)
 ```
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/d6bc4c21-70b4-4038-b2db-03d94397c7ae)
+
+
+### Interaction analysis 
+
+Based on the results of the interaction analysis using an F-test with α = 0.01, it can be concluded that there is no statistically significant interaction between the variables examined. The study compared various interactions, such as limited edition status versus rating, limited edition versus log number of reviews, etc. In each case, the F-test did not generate a significant result, failing to reject the null hypothesis of no interaction. This suggests that the relationship between the variables remains consistent across different levels of the interacting factors. Therefore, these findings indicate that the linear regression model built for log love response does not adequately require additional interaction terms to explain the variation in customer affection. 
+
+**Result of interaction analysis**
+
+|                                           |                    | F test with α = 0.01  |                   |          |                                         |                    |                 |
+|-------------------------------------------|--------------------|-----------------------|-------------------|----------|-----------------------------------------|--------------------|-----------------|
+|   **Interaction**                             |   **Plot regression**  | **F***                    | **F (0.99, 1, 996)**  | **P-value**  | **Result of test**                          |   **Conclusion**         | **Output and code** |
+| limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | Appendix        |
+| limited edition vs log number of reviews  | Parallel lines     | 0.324                 | 6.66              | 0.569    | Fail reject Ho  Not statist. Signific   | No interaction     | Appendix        |
+| limited edition vs. log price             | Parallel lines     | 2.224                 | 6.66              | 0.136    | Fail reject Ho  Not statist. Signific   | Not interaction    | Appendix        |
+| limited edition vs. log value price       | Parallel lines     | 2.178                 | 6.66              | 0.14     | Fail reject Ho  Not statist. Signific   | Not interaction    | Appendix        |
+| exclusive vs. rating                      | Parallel lines     | 0.124                 | 6.66              | 0.725    | Fail reject Ho  Not statist. Signific   | Not interaction    | Appendix        |
+| exclusive vs. log number of reviews       | Parallel lines     | 0.638                 | 6.66              | 0.425    | Fail reject Ho  Not statist. Signific   | Not interaction    | Appendix        |
+| Exclusive vs. log value price             | Parallel lines     | 4.345                 | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific   | No interaction     | Appendix        |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
