@@ -1,13 +1,19 @@
+# Business Analysis of the Personal Care and Beauty Market Case Sephora Beauty Retailer  
+**Edward Guzman Leano**
+
+**eguzmanleano30@gmail.com**
+
 ## Justification for the Project:
 
 The main objective of this project is to develop an understanding of the requirements of Sephora’s clients and analyze opportunities that can be exploited and weaknesses that can be avoided from online sales. 
 
 The purpose is to demonstrate that the SWOT methodology could be a helpful tool for developing a business strategy from complex data that personal care and beauty retailers seek.  
 
-### Exploratory Data Analysis (EDA)
-Before developing any business analysis, the Sephora website's data will be examined to uncover patterns, detect anomalies, and gain insights through visualizations and summary statistics. Data transformation will ensure the data is clean and properly formatted, enabling accurate and meaningful analysis.
+**_Note:_**
+_Sephora data was obtained from Kaggle that is an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry._
+_Sephora's dataset – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data_
 
-### Formulation of questions about the requirements of clients: 
+## Formulation of questions about the requirements of clients: 
 
 ### First research question 
 
@@ -24,6 +30,27 @@ Which factors influence the level of customer love for products sold on Sephora�
 **Explanation of research question**
 
 This research question investigates the factors contributing to the level of customer love for products available on Sephora’s website. The dependent variable, ‘love,’ represents the number of people who love a particular product, indicating customer satisfaction and affinity towards the product. 
+
+
+## Method Section. 
+
+### Exploratory Data Analysis (EDA)
+Before developing any business or data analysis, the Sephora website's data will be examined to uncover patterns, detect anomalies, and gain insights through visualizations and summary statistics. Data transformation will ensure the data is clean and properly formatted, enabling accurate and meaningful analysis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
