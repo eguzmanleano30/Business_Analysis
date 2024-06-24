@@ -320,14 +320,14 @@ Based on the results of the interaction analysis using an F-test with α = 0.01,
 |                                           |                    | F test with α = 0.01  |                   |          |                                         |                    |                 |
 |-------------------------------------------|--------------------|-----------------------|-------------------|----------|-----------------------------------------|--------------------|-----------------|
 |   **Interaction**                             |   **Plot regression**  | **F***                    | **F (0.99, 1, 996)**  | **P-value**  | **Result of test**                          |   **Conclusion**       | **Output and code** |
-| limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | ![Appendix]((        |
-| limited edition vs log number of reviews  | Parallel lines     | 0.324                 | 6.66              | 0.569    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix]()        |
-| limited edition vs. log price             | Parallel lines     | 2.224                 | 6.66              | 0.136    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix]()        |
-| limited edition vs. log value price       | Parallel lines     | 2.178                 | 6.66              | 0.14     | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix]()        |
-| exclusive vs. rating                      | Parallel lines     | 0.124                 | 6.66              | 0.725    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix]()        |
-| exclusive vs. log number of reviews       | Parallel lines     | 0.638                 | 6.66              | 0.425    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix]()        |
-| Exclusive vs. log value price             | Parallel lines     | 4.345                 | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix]()        |
-| Exclusive vs. log price                   | Parallel lines     | 5.411                 | 6.66              | 0.02     | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix]()        |
+| limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | ![Appendix](Linear_Regression/Interac_limited_edition_vs_value_price.pdf)        |
+| limited edition vs log number of reviews  | Parallel lines     | 0.324                 | 6.66              | 0.569    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_limited_edition_vs_numb_review.pdf)        |
+| limited edition vs. log price             | Parallel lines     | 2.224                 | 6.66              | 0.136    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_limited_edition_vs_price.pdf)        |
+| limited edition vs. log value price       | Parallel lines     | 2.178                 | 6.66              | 0.14     | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_limited_edition_vs_rating.pdf)        |
+| exclusive vs. rating                      | Parallel lines     | 0.124                 | 6.66              | 0.725    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_exclusive_vs_rating.pdf)        |
+| exclusive vs. log number of reviews       | Parallel lines     | 0.638                 | 6.66              | 0.425    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_exclusive_vs_numb_review.pdf)        |
+| Exclusive vs. log value price             | Parallel lines     | 4.345                 | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_exclusive_vs_value_price.pdf)        |
+| Exclusive vs. log price                   | Parallel lines     | 5.411                 | 6.66              | 0.02     | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_exclusive_vs_price.pdf)        |
 
 
 
