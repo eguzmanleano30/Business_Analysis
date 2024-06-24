@@ -317,7 +317,7 @@ Based on the results of the interaction analysis using an F-test with α = 0.01,
 
 **Result of interaction analysis**
 
-|                                           |                    | F test with α = 0.01  |                   |          |                                         |                    |                 |
+|                                           |                    | **F test with α = 0.01**  |                   |          |                                         |                    |                 |
 |-------------------------------------------|--------------------|-----------------------|-------------------|----------|-----------------------------------------|--------------------|-----------------|
 |   **Interaction**                             |   **Plot regression**  | **F***                    | **F (0.99, 1, 996)**  | **P-value**  | **Result of test**                          |   **Conclusion**       | **Output and code** |
 | limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | ![Appendix](Linear_Regression/Interac_limited_edition_vs_value_price.pdf)        |
@@ -331,32 +331,189 @@ Based on the results of the interaction analysis using an F-test with α = 0.01,
 
 
 
+### Model Validation 
+
+### _Model validation with independent data_ 
+
+The validation of the linear regression model, utilizing both training and testing data derived from the Sephora dataset, reveals the model's reliability and predictive performance. The review of the coefficients demonstrates consistency across both datasets, with factors such as rating, the logarithm of the number of reviews, and the perceived value price displaying statistically significant impacts on customer affection. Additionally, variables like log price and exclusive and limited edition affect product love in both sets. Despite a slightly higher Mean Squared Prediction Error (MSPE) for the testing data than the Mean Squared Error (MSE) for the training data, their proximity suggests that the model's predictive ability remains unbiased and reasonably accurate. Overall, the validation process underscores the reliability of the linear regression model in predicting customer affection for Sephora products. 
+
+**Statistic summary of model with training data**
+
+```{r}
+training <- sephoraData
+
+full <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition, data = training)
+
+base <- lm(log_love ~ 1, data = training)
+
+m1_training <- stats::step(full,
+scope = list(upper= full,
+lower= ~ 1),
+direction = "both", trace = FALSE)
+
+
+summary.m1_training <- summary(m1_training)
+
+kbl(tidy(m1_training)) %>%
+kable_classic_2(full_width = F)
+```
+
+|                       | Coefficient | SE    | T value | p\-value |
+| --------------------- | ----------- | ----- | ------- | -------- |
+| (Intercept)           | 5.871       | 0.182 | 32.31   | 0        |
+| rating                | 0.089       | 0.026 | 3.361   | 0        |
+| log_number_of_reviews | 0.684       | 0.015 | 45.56   | 0        |
+| log_price             | \-0.806     | 0.289 | \-2.793 | 0.005    |
+| log_value_price       | 0.658       | 0.284 | 2.320   | 0.021    |
+| exclusive1            | 0.309       | 0.061 | 5.102   | 0        |
+| limited_edition1      | 0.283       | 0.103 | 2.747   | 0.006    |
+
+
+**Statistic summary of model with trining data**
+
+```{r}
+first_validation <- read.csv("./data/cosmetic/SecondSephoraClean.csv", header = TRUE)
+
+
+# Get the IDs from the first sample
+ids_in_training <- training$id
+
+# Exclude rows with these IDs from the second dataset before sampling again
+sephora_remaining <- anti_join(first_validation, training, by = "id")
+
+# Now, sample 2000 (or any other number you wish) rows from the remaining data
+set.seed(036)  # Change the seed for a different sample
+testing <- sample_n(sephora_remaining, 2000, replace = FALSE)
+
+training <- training[, -1]
+
+testing <- testing %>%
+  select(id, log_love, rating, log_number_of_reviews, log_price, log_value_price, exclusive, limited_edition)
+
+# Encoding type of product as factor
+testing$exclusive = as.factor(testing$exclusive)
+
+testing$limited_edition = as.factor(testing$limited_edition)
+
+# Fit the same model as m1_training using the same formula
+m1_testing <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition, data = testing)
+
+kbl(tidy(m1_testing)) %>%
+kable_classic_2(full_width = F)
+```
+
+|                       | Coefficient | SE    | T value | p\-value |
+| --------------------- | ----------- | ----- | ------- | -------- |
+| (Intercept)           | 5.821       | 0.139 | 41.945  | 0        |
+| rating                | 0.139       | 0.022 | 6.431   | 0        |
+| log_number_of_reviews | 0.683       | 0.012 | 59.294  | 0        |
+| log_price             | \-1.156     | 0.215 | \-5.391 | 0        |
+| log_value_price       | 0.97        | 0.211 | 4.596   | 0        |
+| exclusive1            | 0.117       | 0.046 | 2.55    | 0.011    |
+| limited_edition1      | 0.371       | 0.071 | 5.263   | 0        |
 
 
 
+```{r}
+pred <- predict(m1_training, testing)
+
+MSPE <- round(mean((testing$log_love - pred)^2),3)
+```
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/d29a7bbd-33e3-4ecb-865e-b39db2b47f8e)
 
 
+### Cross-validation when no independent data available 
+
+The average Mean Squared Prediction Error (MSPE) and Root Mean Squared Error (RMSE) across multiple folds indicate the model's consistency and effectiveness in capturing the underlying relationships within the Sephora dataset. Despite variations in the MSPE and RMSE values between folds, the average metrics remain relatively stable, suggesting that the model's predictive ability is robust and reliable across different subsets of the data. 
+
+```{r}
+data <- rbind(training, testing)
+n <- dim(data)[1]
+num.folds <- 10
+
+#set random seed so results are reproducible
+set.seed(100)
+
+#randomly assign each observation to a "fold" (1-10)
+folds <- sample(rep(1:num.folds, length = n))
+
+#initialize an object to store MSPE values
+MSPE <- rep(0, num.folds)
 
 
+#for each fold, split data into training & testing
+#fit model from training
+#obtain predicted values from testing
+#compute MSPE
+for (k in 1:num.folds){
+training <- data[folds!=k, ]
+testing <- data[folds==k, ]
+Candidate.model <- lm(m1_training, data = training)
+pred <- predict(Candidate.model, testing)
+MSPE[k] <- mean((testing$log_love - pred)^2)
+}
+c(avg_MSPE = mean(MSPE), avg_RMSE = mean(sqrt(MSPE)))
+```
+
+**Average MSPE   = 0.721    average RMSE = 0.848**
+
+```{r}
+# Initialize an object to store MSPE values
+MSPE <- rep(0, num.folds)
+
+# For each fold, split data into training & testing,
+# fit model from training, obtain predicted values from testing, and compute MSPE
+for (k in 1:num.folds) {
+  # Get indices of observations not used in the previous process
+  excluded_indices <- which(folds != k)
+  
+  # Split data into folds for this iteration
+  testing_data <- data[excluded_indices, ]
+  training_data <- data[-excluded_indices, ]
+  
+  # Fit model from training data
+  Candidate.model <- lm(m1_training, data = training_data)
+  
+  # Obtain predicted values from testing data
+  pred <- predict(Candidate.model, newdata = testing_data)
+  
+  # Compute MSPE
+  MSPE[k] <- mean((testing_data$log_love - pred)^2)
+}
+
+# Calculate and print the average MSPE and RMSE
+c(avg_MSPE = mean(MSPE), avg_RMSE = mean(sqrt(MSPE)))
+```
+
+**Average MSPE   = 0.737    average RMSE = 0.859**
+
+### Model Diagnostics 
+
+**_Outlying Y observations_**
+
+Some observations of log love response are atypical, but they are very few. 
+
+```{r}
+## Fit 2 variable model
+m_X1X2 <- lm(log_love ~ rating + log_number_of_reviews + log_price + log_value_price + exclusive + limited_edition, data = sephoraData) 
 
 
+#from olsrr package
+ols_plot_resid_stand(m_X1X2)  # plot studentized residuals
+```
+
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/7e5446a4-5d6d-4366-9c1f-c2ee9132e4bd)
 
 
+```{r}
+ols_plot_resid_stud(m_X1X2)  # plot studentized deleted residuals
+```
 
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/be4284d5-3136-4595-8c37-cdc4dddbf262)
 
+```{r}
+ols_plot_resid_stud_fit(m_X1X2)  # plot deleted vs predicted
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/eguzmanleano30/Business_Analysis/assets/172155030/8a28d9a5-4883-4e4c-82c4-52cc1bd0945b)
 
