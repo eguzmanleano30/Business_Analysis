@@ -106,10 +106,10 @@ On the other hand, examining the independence assumption revealed consistent out
 |   | Linearity assumption  |   |   | Independence assumption  |   |   |  
 | --------------------- | --------------------- | -------------------------- | ---------------- | ------------------ | ------------ | --------------- |
 |  **<br>Predictor**        | **Residual vs predictor** | **Residual vs. fitted values** | **Conclusion**       | **Residual vs. order** | **Conclusion**   | **Output and code** |
-| Log value price       | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Value_price_lineari_Independ.pdf)        |
-| Log price             | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Price_lineari_Independ.pdf)        |
-| Log number of reviews | U pattern             | U pattern                  | Violation        | Random cloud       | No violation | ![Appendix](Linear_Regression/number_review_lineari_Independ.pdf)        |
-| Rating                | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | ![Appendix](Linear_Regression/Rating_lineari_Independ.pdf)        |
+| Log value price       | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | [Appendix](Linear_Regression/Value_price_lineari_Independ.pdf)        |
+| Log price             | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | [Appendix](Linear_Regression/Price_lineari_Independ.pdf)        |
+| Log number of reviews | U pattern             | U pattern                  | Violation        | Random cloud       | No violation | [Appendix](Linear_Regression/number_review_lineari_Independ.pdf)        |
+| Rating                | No pattern            | No pattern                 | No <br>Violation | Random cloud       | No violation | [Appendix](Linear_Regression/Rating_lineari_Independ.pdf)        |
 
 
 ### Diagnostics of normality assumptions for predictors 
@@ -120,10 +120,10 @@ Based on the analysis of the normality assumption – as illustrated in the foll
 
 | Predictor              | QQ plot                 | Histogram                     | Boxplot                              | Shapiro-Wilks test                                               | Conclusion     | Output and code |
 |------------------------|-------------------------|-------------------------------|--------------------------------------|------------------------------------------------------------------|----------------|-----------------|
-| Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_value_price.pdf)        |
-| Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  | ![Appendix](Linear_Regression/Normality_price.pdf)        |
-| Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      | ![Appendix](Linear_Regression/Normality_numb_of_review.pdf)        |
-| Rating                 | straight diagonal line  | Norm. Ditribu.                | some outliers to the left and right  | Fail reject Hop-value: 0.204  Errors are normally distributed    | No. violation  | ![Appendix](Linear_Regression/Normality_rating.pdf)        |
+| Log value price        | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.243  Errors are normally distributed  | No. violation  | [Appendix](Linear_Regression/Normality_value_price.pdf)        |
+| Log price              | straight diagonal line  | Norm. Ditribu.                | some outliers left                   | Fail reject Ho  p-value: 0.224  Errors are normally distributed  | No. violation  | [Appendix](Linear_Regression/Normality_price.pdf)        |
+| Log number of reviews  | Outlier down line       | slight skewness to the right  | some outliers right                  | reject Ho  p-value=1.58e-9  Errors are NOT normally distributed  | violation      | [Appendix](Linear_Regression/Normality_numb_of_review.pdf)        |
+| Rating                 | straight diagonal line  | Norm. Ditribu.                | some outliers to the left and right  | Fail reject Hop-value: 0.204  Errors are normally distributed    | No. violation  | [Appendix](Linear_Regression/Normality_rating.pdf)        |
 
 
 
@@ -135,10 +135,10 @@ The equal variance assumption for the numerical variables – as shown in the fo
 
 |   Predictor            | Log love vs Predictor  | Residual vs predictor  | Levene’s Test                                                | Conclusion    | Output and code |
 |------------------------|------------------------|------------------------|--------------------------------------------------------------|---------------|-----------------|
-| Log value price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.789  Error variance is constant   | No violation  | ![Appendix](Linear_Regression/equal_variance_value_price.pdf)        |
-| Log price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.457  Error variance is constant   | No violation  | ![Appendix](Linear_Regression/equal_variance_price.pdf)        |
-| Log number of reviews  | Random cloud           | U shape                | reject Ho  P-value: 0.002  Error variance is constant        | Violation     | ![Appendix](Linear_Regression/equal_variance_numb_of_review.pdf)        |
-| Rating                 | U shape                | U shape                | reject HoP-value: 5.379e-06  Error variance is not constant  | Violation     | ![Appendix](Linear_Regression/equal_variance_rating.pdf)        |
+| Log value price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.789  Error variance is constant   | No violation  | [Appendix](Linear_Regression/equal_variance_value_price.pdf)        |
+| Log price        | Random cloud           | Random cloud           | Fail reject Ho  P-value: 0.457  Error variance is constant   | No violation  | [Appendix](Linear_Regression/equal_variance_price.pdf)        |
+| Log number of reviews  | Random cloud           | U shape                | reject Ho  P-value: 0.002  Error variance is constant        | Violation     | [Appendix](Linear_Regression/equal_variance_numb_of_review.pdf)        |
+| Rating                 | U shape                | U shape                | reject HoP-value: 5.379e-06  Error variance is not constant  | Violation     | [Appendix](Linear_Regression/equal_variance_rating.pdf)        |
 
 
 ### Analysis of categorical variables 
@@ -149,10 +149,10 @@ The t-test analysis for the influence of categorical variables on Sephora data d
 
 | Predictor           | T*    | T    | p-value  | T-test                                 | Conclusion           | Output and code |
 |---------------------|-------|------|----------|----------------------------------------|----------------------|-----------------|
-| Online only         | 12.97 | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_online_only_variable.pdf)        |
-| exclusive           | 3.38  | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_exclusive_variable.pdf)        |
-| Limited edition     | 352   | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | ![Appendix](Linear_Regression/Analisis_of_limited_edition_variable.pdf)        |
-| Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | ![Appendix](Linear_Regression/Analisis_of_limited_time_offer.pdf)        |
+| Online only         | 12.97 | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | [Appendix](Linear_Regression/Analisis_of_online_only_variable.pdf)        |
+| exclusive           | 3.38  | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | [Appendix](Linear_Regression/Analisis_of_exclusive_variable.pdf)        |
+| Limited edition     | 352   | 1.65 | 0        | Reject Ho  Statistic significant       | No exclude variable  | [Appendix](Linear_Regression/Analisis_of_limited_edition_variable.pdf)        |
+| Limited time offer  | 0.38  | 1.65 | 0.703    | Fail Reject Ho  Statistic significant  | exclude variable     | [Appendix](Linear_Regression/Analisis_of_limited_time_offer.pdf)        |
 
 
 ### Predictors selected to build linear regression model
@@ -320,14 +320,14 @@ Based on the results of the interaction analysis using an F-test with α = 0.01,
 |                                           |                    | **F test with α = 0.01**  |                   |          |                                         |                    |                 |
 |-------------------------------------------|--------------------|-----------------------|-------------------|----------|-----------------------------------------|--------------------|-----------------|
 |   **Interaction**                             |   **Plot regression**  | **F***                    | **F (0.99, 1, 996)**  | **P-value**  | **Result of test**                          |   **Conclusion**       | **Output and code** |
-| limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | ![Appendix](Linear_Regression/Interac_limited_edition_vs_value_price.pdf)        |
-| limited edition vs log number of reviews  | Parallel lines     | 0.324                 | 6.66              | 0.569    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_limited_edition_vs_numb_review.pdf)        |
-| limited edition vs. log price             | Parallel lines     | 2.224                 | 6.66              | 0.136    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_limited_edition_vs_price.pdf)        |
-| limited edition vs. log value price       | Parallel lines     | 2.178                 | 6.66              | 0.14     | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_limited_edition_vs_rating.pdf)        |
-| exclusive vs. rating                      | Parallel lines     | 0.124                 | 6.66              | 0.725    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_exclusive_vs_rating.pdf)        |
-| exclusive vs. log number of reviews       | Parallel lines     | 0.638                 | 6.66              | 0.425    | Fail reject Ho  Not statist. Signific   | Not interaction    | ![Appendix](Linear_Regression/Interac_exclusive_vs_numb_review.pdf)        |
-| Exclusive vs. log value price             | Parallel lines     | 4.345                 | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_exclusive_vs_value_price.pdf)        |
-| Exclusive vs. log price                   | Parallel lines     | 5.411                 | 6.66              | 0.02     | Fail reject Ho  Not statist. Signific   | No interaction     | ![Appendix](Linear_Regression/Interac_exclusive_vs_price.pdf)        |
+| limited edition vs rating                 | Parallel lines     | 4.46                  | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific.  | No interaction     | [Appendix](Linear_Regression/Interac_limited_edition_vs_value_price.pdf)        |
+| limited edition vs log number of reviews  | Parallel lines     | 0.324                 | 6.66              | 0.569    | Fail reject Ho  Not statist. Signific   | No interaction     | [Appendix](Linear_Regression/Interac_limited_edition_vs_numb_review.pdf)        |
+| limited edition vs. log price             | Parallel lines     | 2.224                 | 6.66              | 0.136    | Fail reject Ho  Not statist. Signific   | Not interaction    | [Appendix](Linear_Regression/Interac_limited_edition_vs_price.pdf)        |
+| limited edition vs. log value price       | Parallel lines     | 2.178                 | 6.66              | 0.14     | Fail reject Ho  Not statist. Signific   | Not interaction    | [Appendix](Linear_Regression/Interac_limited_edition_vs_rating.pdf)        |
+| exclusive vs. rating                      | Parallel lines     | 0.124                 | 6.66              | 0.725    | Fail reject Ho  Not statist. Signific   | Not interaction    | [Appendix](Linear_Regression/Interac_exclusive_vs_rating.pdf)        |
+| exclusive vs. log number of reviews       | Parallel lines     | 0.638                 | 6.66              | 0.425    | Fail reject Ho  Not statist. Signific   | Not interaction    | [Appendix](Linear_Regression/Interac_exclusive_vs_numb_review.pdf)        |
+| Exclusive vs. log value price             | Parallel lines     | 4.345                 | 6.66              | 0.037    | Fail reject Ho  Not statist. Signific   | No interaction     | [Appendix](Linear_Regression/Interac_exclusive_vs_value_price.pdf)        |
+| Exclusive vs. log price                   | Parallel lines     | 5.411                 | 6.66              | 0.02     | Fail reject Ho  Not statist. Signific   | No interaction     | [Appendix](Linear_Regression/Interac_exclusive_vs_price.pdf)        |
 
 
 
