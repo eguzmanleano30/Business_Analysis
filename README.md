@@ -41,7 +41,7 @@ This research question investigates the factors contributing to the level of cus
 ### Exploratory Data Analysis (EDA)
 Before developing any business or data analysis, the Sephora website's data will be examined to uncover patterns, detect anomalies, and gain insights through visualizations and summary statistics. Data transformation will ensure the data is clean and properly formatted, enabling accurate and meaningful analysis.
 
-[Process of exploration dat](Exploration_data.md)
+[Exploration Data Analisis of Sephora Website data](Exploration_data.md)
 
 
 
