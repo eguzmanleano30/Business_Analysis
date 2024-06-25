@@ -23,15 +23,15 @@ The following table shows the univariable logistic regression analysis on the Se
 **Univariable Analysis results**
 | Indepen. Variable     | Coeffic. (B1) | Standard Error | Wald Test | P-value | conclusion                                        | Output and code |
 | --------------------- | ------------- | -------------- | --------- | ------- | ------------------------------------------------- | --------------- |
-| Category              | 0             | 1.782 e3       | 0         | 1       | No significant association with online-only sales | ![Appendix](        |
-| Rating                | \- 0.083      | 0.0463         | \-1.801   | 0.0717  | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Rating.pdf)        |
-| limited edition       | 0.702         | 0.077          | 9.144     | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_limited_edition.pdf)        |
-| Limited Edition Offer | \-10.384      | 113.719        | \-0.091   | 0.9275  | No significant association with online-only sales | ![Appendix](Logistic_Regression/Univaria_Analis_limited_edition_offer.pdf)        |
-| Exclusive             | \-0.414       | 0.06026        | \-6.871   | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Exclusive.pdf)        |
-| MarketingFlag         | 19.54         | 156.68         | \-0.091   | 0.9     | No significant association with online-only sales | ![Appendix](Logistic_Regression/Univaria_Analis_MarketingFlag.pdf)        |
-| Log Price             | 0.299         | 0.0357         | 8.385     | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Price.pdf)        |
-| Log Value Price       | 0.334         | 0.03506        | 9.544     | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_Value_Price.pdf)        |
-| Log Love              | \-0.574       | 0.0193         | \-29.68   | 0       | Potential significance for online-only sales      | ![Appendix](Logistic_Regression/Univaria_Analis_love.pdf)        |
+| Category              | 0             | 1.782 e3       | 0         | 1       | No significant association with online-only sales | [Appendix](        |
+| Rating                | \- 0.083      | 0.0463         | \-1.801   | 0.0717  | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_Rating.pdf)        |
+| limited edition       | 0.702         | 0.077          | 9.144     | 0       | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_limited_edition.pdf)        |
+| Limited Edition Offer | \-10.384      | 113.719        | \-0.091   | 0.9275  | No significant association with online-only sales | [Appendix](Logistic_Regression/Univaria_Analis_limited_edition_offer.pdf)        |
+| Exclusive             | \-0.414       | 0.06026        | \-6.871   | 0       | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_Exclusive.pdf)        |
+| MarketingFlag         | 19.54         | 156.68         | \-0.091   | 0.9     | No significant association with online-only sales | [Appendix](Logistic_Regression/Univaria_Analis_MarketingFlag.pdf)        |
+| Log Price             | 0.299         | 0.0357         | 8.385     | 0       | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_Price.pdf)        |
+| Log Value Price       | 0.334         | 0.03506        | 9.544     | 0       | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_Value_Price.pdf)        |
+| Log Love              | \-0.574       | 0.0193         | \-29.68   | 0       | Potential significance for online-only sales      | [Appendix](Logistic_Regression/Univaria_Analis_love.pdf)        |
 
 ### Multivariable Logistic Regression Model Analysis for Online-Only Sales Prediction at Sephora 
 
@@ -39,7 +39,7 @@ Using several potential predictors, the multivariable logistic regression model 
 
 Log odd: G(online_only) = 3.176 + 0.421*limited_edition - 0.306 exclusive -0.907 Log_price + 0.95 Log_value_price - 0.551 Log_love 
 
-![Statistical summary of model with potential predictors](Logistic_Regression/model_with_all_predictors.pdf)
+[Statistical summary of model with potential predictors](Logistic_Regression/model_with_all_predictors.pdf)
 
   | Independent variables | Coefficient | Standard Error | Z Value  | P-value  |
 | --------------------- | ----------- | -------------- | -------- | -------- |
@@ -59,10 +59,10 @@ The following table shows the iterative process of refining the multivariable mo
 |   | Likelihood Ratio Test (LR)  |   |   |   | Confounder Analysis  |   |   |
 | --------------- | ----------------- | --------- | ------- | -------------------------- | ----------------------------------------------------------------------------------- | -------------------- | --------------- |
 | **Variable Remove** | **Residual Deviance** | **LR G** | **P-value** | **Conclusion  <br>Full model** | **Δβ%**                                                                                 | **Conclusion**           | **Output and code** |
-| Log Love        | 9569.19           | 920.11    | 0       | Better model               | Limited Edition: 54.45  <br>Exclusive: 50.73 <br>Price: -6.77 <br>Value Price: 1.56 | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_love.pdf)        |
-| Log Value Price | 9592.74           | 943.66    | 0       | Better model               | Limited Edition: 93.87 <br>Exclusive: 45.7  <br>Price: -126.48                      | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_value_price.pdf)        |
-| Log Price       | 9635.28           | 986.2     | 0       | Better model               | Limited Edition: 99.96 <br>Exclusive: 73.06                                         | Important confounder | ![Appendix](Logistic_Regression/Model_without_log_price.pdf)        |
-| Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | ![Appendix](Logistic_Regression/Model_without_exclusive.pdf)        |
+| Log Love        | 9569.19           | 920.11    | 0       | Better model               | Limited Edition: 54.45  <br>Exclusive: 50.73 <br>Price: -6.77 <br>Value Price: 1.56 | Important confounder | [Appendix](Logistic_Regression/Model_without_log_love.pdf)        |
+| Log Value Price | 9592.74           | 943.66    | 0       | Better model               | Limited Edition: 93.87 <br>Exclusive: 45.7  <br>Price: -126.48                      | Important confounder | [Appendix](Logistic_Regression/Model_without_log_value_price.pdf)        |
+| Log Price       | 9635.28           | 986.2     | 0       | Better model               | Limited Edition: 99.96 <br>Exclusive: 73.06                                         | Important confounder | [Appendix](Logistic_Regression/Model_without_log_price.pdf)        |
+| Exclusive       | 9712.2            | 1063.1    | 0       | Better model               | Limited Edition: 67.05                                                              | Important confounder | [Appendix](Logistic_Regression/Model_without_exclusive.pdf)        |
 
 
 ### _The main effects of the preliminary model_ 
@@ -122,14 +122,14 @@ The interaction analysis reveals significant relationships between predictor var
 
 | Interaction                         | Coeffic. | SE    | Z value | P-value   | Interaction effect | Output and code |
 | ----------------------------------- | -------- | ----- | ------- | --------- | ------------------ | --------------- |
-| limited_edition1 vs exclusive       | 0.115    | 0.174 | 0.663   | 0.507     | Not significant    | ![Appendix](Logistic_Regression/interac_limited_edition_exclusive.pdf)        |
-| limited_edition1 vs log_price       | 0.546    | 0.127 | 4.295   | 1.74e-05  | significant        | ![Appendix](Logistic_Regression/interac_limited_edition_price.pdf)        |
-| limited_edition1 vs log_value_price | 0.556    | 0.122 | 4.539   | 5.65e-06  | significant        | ![Appendix](Logistic_Regression/interac_limited_edition_value_price.pdf)        |
-| Exclusive1 vs log_price             | 0.445    | 0.099 | 4.513   | 6.38e-06  | significant        | ![Appendix](Logistic_Regression/interac_exclusive_price.pdf)        |
-| Exclusive1 vs log_value_price       | 0.447    | 0.095 | 4.709   | 2.49e-06  | significant        | ![Appendix](Logistic_Regression/interac_exclusive_value_price.pdf)        |
-| log_price vs log_value_price        | 0.277    | 0.035 | 7.991   | 1.34e -15 | significant        | ![Appendix](Logistic_Regression/interac_price_value_price.pdf)        |
-| log_price vs log_love               | \-0.064  | 0.029 | \-2.231 | 0.026     | significant        | ![Appendix](Logistic_Regression/interac_price_love.pdf)        |
-| log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | ![Appendix](Logistic_Regression/interac_value_price_love.pdf)        |
+| limited_edition1 vs exclusive       | 0.115    | 0.174 | 0.663   | 0.507     | Not significant    | [Appendix](Logistic_Regression/interac_limited_edition_exclusive.pdf)        |
+| limited_edition1 vs log_price       | 0.546    | 0.127 | 4.295   | 1.74e-05  | significant        | [Appendix](Logistic_Regression/interac_limited_edition_price.pdf)        |
+| limited_edition1 vs log_value_price | 0.556    | 0.122 | 4.539   | 5.65e-06  | significant        | [Appendix](Logistic_Regression/interac_limited_edition_value_price.pdf)        |
+| Exclusive1 vs log_price             | 0.445    | 0.099 | 4.513   | 6.38e-06  | significant        | [Appendix](Logistic_Regression/interac_exclusive_price.pdf)        |
+| Exclusive1 vs log_value_price       | 0.447    | 0.095 | 4.709   | 2.49e-06  | significant        | [Appendix](Logistic_Regression/interac_exclusive_value_price.pdf)        |
+| log_price vs log_value_price        | 0.277    | 0.035 | 7.991   | 1.34e -15 | significant        | [Appendix](Logistic_Regression/interac_price_value_price.pdf)        |
+| log_price vs log_love               | \-0.064  | 0.029 | \-2.231 | 0.026     | significant        | [Appendix](Logistic_Regression/interac_price_love.pdf)        |
+| log_value_price vs log_love         | \-0.057  | 0.028 | \-2.035 | 0.042     | significant        | [Appendix](Logistic_Regression/interac_value_price_love.pdf)        |
 
 
 ### Final model and validation. 
@@ -155,7 +155,7 @@ Final log odd model:
 | limited_edition1:log_price | 0.437       | 0.130 | 3.354    | 0.001   |
 | exclusive1:log_price       | 0.364       | 0.101 | 3.586    | 0       |
 
-![Plot and code of statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
+[Plot and code of statistical summary of final model with interaction effect](Logistic_Regression/final_model_with_interaction.pdf)
 
 ### Validation of the final model 
 
