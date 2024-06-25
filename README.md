@@ -54,11 +54,11 @@ The project's next phase involves building a Logistic Regression model that addr
 
 [Logistic regression model for online sells](Logistic_regression.md)
 
+### Multiple Linear Regression Analisis for customer who love a beauty produc
 
+We will employ multiple linear regression as our primary analytical tool to respond to the second question: Which factors influence the degree of customer affinity towards products available on Sephora's website? This methodology will help to analyze the factors influencing customer love for products sold on Sephora's website. Likewise, it allows us to examine the relationship between multiple predictor variables and the outcome variable, which is the level of customer love. The entire mutiple linear regression process is detailed in the following link.
 
-
-
-
+[Multiple Linear Regressio](Linear_Regression.md)
 
 
 
