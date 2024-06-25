@@ -94,10 +94,10 @@ The following table illustrate the results of log transformation of the variable
 
 | **Log transform. Variable** | **Skewness** | **Kurtosis** | **QQ Plot**                          | **Box Plot**                          | **Histogram**                 | **Plot and code** |
 | --------------------------- | ------------ | ------------ | ------------------------------------ | ------------------------------------- | ----------------------------- | ----------------- |
-| Log love                    | \-0.013      | 3.02         | Normal, tiny outliers                | Normal, outliers on both sides        | Normal                        | ![Appendix F](EDA/PDF/transformation_love.pdf)         |
-| Log number of review        | \-0.39       | 3.02         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | ![Appendix G](EDA/PDF/transformation_number_of_reviews.pdf)         |
-| Log price                   | \-0.39       | 3.28         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | ![Appendix H](EDA/PDF/transformation_price.pdf)         |
-| Log value price             | \-0.19       | 2.34         | Normal, tiny outliers on top         | Normal, some outliers left            | Normal, slight skewness left  | ![Appendix I](EDA/PDF/transformation_value_price.pdf)       |
+| Log love                    | \-0.013      | 3.02         | Normal, tiny outliers                | Normal, outliers on both sides        | Normal                        | [Appendix F](EDA/PDF/transformation_love.pdf)         |
+| Log number of review        | \-0.39       | 3.02         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | [Appendix G](EDA/PDF/transformation_number_of_reviews.pdf)         |
+| Log price                   | \-0.39       | 3.28         | Normal, tiny outliers, slight uptick | Normal, few outliers left, more right | Normal, slight skewness right | [Appendix H](EDA/PDF/transformation_price.pdf)         |
+| Log value price             | \-0.19       | 2.34         | Normal, tiny outliers on top         | Normal, some outliers left            | Normal, slight skewness left  | [Appendix I](EDA/PDF/transformation_value_price.pdf)       |
 
 ### Exploration of binary variables.
 
