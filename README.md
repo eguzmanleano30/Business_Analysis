@@ -5,11 +5,11 @@
 
 ## Justification for the Project:
 
-The main objective of this project is to develop an understanding of the requirements of Sephora’s clients and analyze opportunities that can be exploited and weaknesses that can be avoided from online sales. 
+The main objective of this project is to develop an knowledge of the requirements of Sephora’s clients, analyze opportunities that can be exploited, and weaknesses that can be avoided from online sales. 
 
-The purpose is to demonstrate that the SWOT methodology could be a helpful tool for developing a business strategy from complex data that personal care and beauty retailers seek.  
+The purpose is to show that the SWOT methodology could be a helpful tool for developing a business strategy from complex data for personal care and beauty retailers.  
 
-### Information of Company
+### Information of Company and data used
 Sephora is a globally renowned multinational chain specializing in beauty and personal care products with a robust foothold, particularly within the U.S. market. Famous for its expansive online platform, Sephora has effectively capitalized on e-commerce trends, offering customers a seamless shopping experience and various products. Moreover, Sephora's innovative approach incorporates customer feedback mechanisms, allowing users to rate and endorse products, fostering a sense of community and trust among its clients
 https://en.wikipedia.org/wiki/Sephora
 
