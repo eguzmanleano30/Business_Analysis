@@ -9,14 +9,14 @@
 
 The main objective of this project is to develop an knowledge of the requirements of Sephora’s clients, analyze opportunities that can be exploited, and weaknesses that can be avoided from online sales. 
 
-The purpose is to show that the SWOT methodology could be a helpful tool for developing a business strategy from complex data for personal care and beauty retailers.  
+The purpose is show that the SWOT methodology could be a helpful tool for developing a business strategy from complex business data as the personal care and beauty retailers.  
 
 ### Information of Company and data used
 Sephora is a globally renowned multinational chain specializing in beauty and personal care products with a robust foothold, particularly within the U.S. market. Famous for its expansive online platform, Sephora has effectively capitalized on e-commerce trends, offering customers a seamless shopping experience and various products. Moreover, Sephora's innovative approach incorporates customer feedback mechanisms, allowing users to rate and endorse products, fostering a sense of community and trust among its clients.
 
 https://en.wikipedia.org/wiki/Sephora
 
-The Sephora Website data was obtained from Kaggle, an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry. Sephora's data – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. 
+The Sephora data was obtained from Kaggle, an online community and platform for data scientists and machine learning practitioners to find and publish datasets, explore and build models, and compete in data science challenges. This dataset is valuable for projects involving market analysis, consumer behavior studies, and trend analysis in the beauty industry. Sephora's data – with 21 variables and 91,658 observations – provides essential insights into its product offerings online. This information discloses valuable insights into Sephora's product lineup, customer preferences, and marketing strategies. 
 
 https://www.kaggle.com/datasets/raghadalharbi/all-products-available-on-sephora-website/data
 
@@ -50,7 +50,7 @@ Before conducting any business or data analysis, we will examine data to identif
 
 ### Logistic Regression Analysis for Online Shopping Preferences 
 
-The project's next phase involves building a Logistic Regression model that addresses the research question: What motivates customers to shop online instead of visiting physical stores at Sephora? Given the binary nature of the outcome variable (online shopping vs. in-store shopping), logistic regression is the appropriate model for estimating the probability of a customer shopping online based on various predictor variables. The method is grounded in selecting variables that contribute meaningfully to the model's predictive power while avoiding overfitting and ensuring clinical relevance. The entire logistic regression process is detailed in the following link.
+The project's next phase involves building a Logistic Regression model that addresses the first research question: What motivates customers to shop online instead of visiting physical stores at Sephora? Given the binary nature of the outcome variable (online shopping vs. in-store shopping), logistic regression is the appropriate model for estimating the probability of a customer shopping online based on various predictor variables. The method is grounded in selecting variables that contribute meaningfully to the model's predictive power while avoiding overfitting and ensuring clinical relevance. The entire logistic regression process is detailed in the following link.
 
 [Logistic regression model for online sells](Logistic_regression.md)
 
