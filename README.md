@@ -50,13 +50,13 @@ Before conducting any business or data analysis, we will examine data to identif
 
 ### Logistic Regression Analysis for Online Shopping Preferences 
 
-The project's next phase involves building a Logistic Regression model with the variable online_only that addresses the first research question. The variable indicates whether a product is exclusively available through Sephora's online platform. Given the binary nature of the outcome variable (online shopping vs. in-store shopping), logistic regression is the appropriate model for estimating the probability of a customer shopping online based on various predictor variables. The method is grounded in selecting variables that contribute meaningfully to the model's predictive power while avoiding overfitting and ensuring clinical relevance. The entire logistic regression model-building process is detailed in the following link.
+The project's next phase involves building a logistic regression model with the 'online_only' variable as the response to address the first research question. This variable indicates whether a product is available exclusively on Sephora's online platform or in-store. Given the binary nature of the outcome, logistic regression is the appropriate method to estimate the probability of a product being offered online based on various predictor variables. The detailed process of constructing the logistic regression model is outlined in the following link.
 
 [Logistic regression model for online sells](Logistic_regression.md)
 
-### Multiple Linear Regression Analisis for customer who love a beauty produc
+### Multiple Linear Regression Analisis for customer who love a beauty products
 
-We will employ multiple linear regression as our primary analytical tool to respond to the second question: Which factors influence the degree of customer affinity towards products available on Sephora's website? This methodology will help to analyze the factors influencing customer love for products sold on Sephora's website. Likewise, it allows us to examine the relationship between multiple predictor variables and the outcome variable, which is the level of customer love. The entire mutiple linear regression process is detailed in the following link.
+We will employ multiple linear regression with the 'love' variable as the response to address the second research question. This variable measures customer interest in a product by tallying the number of users who have expressed affection or favorited the item. This methodology will help analyze the factors influencing customer love for products sold on Sephora's website and examine the relationship between multiple predictor variables and the outcome variable. The detailed process of constructing the multiple linear regression model is outlined in the following link.
 
 [Multiple Linear Regressio](Linear_Regression.md)
 
