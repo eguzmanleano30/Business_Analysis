@@ -54,11 +54,46 @@ The project's next phase involves building a logistic regression model with the 
 
 [Logistic regression model for online sells](Logistic_regression.md)
 
+The final logistic regression model for predicting the likelihood of a product being online-only is expressed as:
+
+**G(online_only)** = 3.64-1.26*limited_edition -1.61*exclusive-0.97*log_price + 0.9*log_value_price -0.55limited_edition*log_price +0.44exclusive*log_price
+
 ### Multiple Linear Regression Analisis for customer who love a beauty products
 
 We will employ multiple linear regression with the 'love' variable as the response to address the second research question. This variable measures customer interest in a product by tallying the number of users who have expressed affection or favorited the item. This methodology will help analyze the factors influencing customer love for products sold on Sephora's website and examine the relationship between multiple predictor variables and the outcome variable. The detailed process of constructing the multiple linear regression model is outlined in the following link.
 
 [Multiple Linear Regressio](Linear_Regression.md)
+
+The final linear regression model for predicting customer love is expressed as:
+
+_**log(love)** = 5.87 + 0.08 x rating + 0.68 x log(number_of_reviews) - 0.81 x Log(price) ​+ 0.66 x Log(value_price) + 0.31 x exclusive + 0.28 x limited_edition​_
+
+This model indicates that customer love, as measured by the number of users who have favorited a product, is positively influenced by the product's rating, the log of the number of reviews, the log of the value for price, exclusivity, and limited edition status. Conversely, it is negatively influenced by the log of the price. This regression model helps identify the key factors that significantly contribute to customer interest and preference for products on Sephora's website.
+
+
+## SWOT analysis of Sephora 
+### Interpretation of coefficient for logistic regression model
+The logistic regression analysis reveals key strengths (opportunities) and weaknesses (threats) influencing the likelihood of products being exclusively available online on Sephora's platform. Strengths include the positive impact of better value-for-price perceptions, as indicated by the log(value for price) coefficient, which increases the probability of a product being online-only. Additionally, exclusive products combined with higher prices show a positive interaction effect, making them more attractive to online shoppers. Conversely, weaknesses include limited edition and exclusive products, both of which significantly decrease the likelihood of online-only availability, as indicated by their negative coefficients. Higher prices also reduce the probability of online-only status, potentially limiting accessibility for price-sensitive customers. Furthermore, the negative interaction effect between limited edition status and higher prices exacerbates this limitation, restricting the availability of these items online. This analysis provides strategic insights for Sephora to optimize product availability and accessibility on their online platform by balancing perceived value and pricing strategies to better cater to online customer preferences.
+
+
+| **Opportunities (Strengths)**                            | **Coefficient** | **Interpretation**                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Log(Value for Price) (Coefficient: 0.90)                 | 0.9             | Each one-unit increase in log(value for price) increases the log-odds of being online-only by 0.90. This suggests that products perceived as offering better value for their price are more likely to be exclusively available online. This can attract price-sensitive customers who seek value in their purchases.                                    |
+| Interaction: Exclusive \* Log(Price) (Coefficient: 0.44) | 0.44            | The positive interaction effect between being an exclusive product and the logarithm of price indicates that for exclusive products, the negative impact of higher prices on the likelihood of being online-only is mitigated. This enhances the attractiveness of exclusive items for online shoppers who may perceive them as worth the higher price. |
+
+
+| **Weaknesses (Threats)**                                        | **Coefficient** | **Interpretation**                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Limited Edition (Coefficient: -1.26)                            | \-1.26          | Limited edition products are less likely to be available exclusively online, as the negative coefficient indicates. This limits the accessibility of these products to online customers, potentially missing out on online sales opportunities and restricting customer reach.                                                                                         |
+| Exclusive (Coefficient: -1.61)                                  | \-1.61          | Being an exclusive product decreases the log-odds of being online-only by 1.61. This suggests that while exclusivity can enhance perceived value, it may reduce the likelihood of online-only availability, limiting accessibility and potentially missing out on online customer engagement.                                                                          |
+| Log(Price) (Coefficient: -0.97)                                 | \-0.97          | Each one-unit increase in log(price) decreases the log-odds of a product being online-only by 0.97. Higher prices make products less likely to be exclusively available online, potentially limiting accessibility to online shoppers who may seek more affordable options.                                                                                            |
+| Interaction: Limited Edition \* Log(Price) (Coefficient: -0.55) | \-0.55          | The negative interaction effect between limited edition status and log(price) suggests that the impact of limited edition status on reducing the likelihood of being online-only is amplified for higher-priced products. This further restricts the availability of limited edition items to online customers, potentially missing out on online sales opportunities. |
+
+
+
+
+
+
 
 
 
