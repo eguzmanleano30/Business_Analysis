@@ -50,7 +50,7 @@ Before conducting any business or data analysis, we will examine data to identif
 
 ### Logistic Regression Analysis for Online Shopping Preferences 
 
-The project's next phase involves building a Logistic Regression model that addresses the first research question: What motivates customers to shop online instead of visiting physical stores at Sephora? Given the binary nature of the outcome variable (online shopping vs. in-store shopping), logistic regression is the appropriate model for estimating the probability of a customer shopping online based on various predictor variables. The method is grounded in selecting variables that contribute meaningfully to the model's predictive power while avoiding overfitting and ensuring clinical relevance. The entire logistic regression process is detailed in the following link.
+The project's next phase involves building a Logistic Regression model with the variable online_only that addresses the first research question. The variable indicates whether a product is exclusively available through Sephora's online platform. Given the binary nature of the outcome variable (online shopping vs. in-store shopping), logistic regression is the appropriate model for estimating the probability of a customer shopping online based on various predictor variables. The method is grounded in selecting variables that contribute meaningfully to the model's predictive power while avoiding overfitting and ensuring clinical relevance. The entire logistic regression model-building process is detailed in the following link.
 
 [Logistic regression model for online sells](Logistic_regression.md)
 
