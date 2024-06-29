@@ -73,7 +73,7 @@ This model indicates that customer love, as measured by the number of users who 
 
 ## SWOT analysis of Sephora 
 ### Interpretation of coefficient for logistic regression model
-The logistic regression analysis highlights key strengths and weaknesses affecting the likelihood of products being online-only on Sephora's platform. Strengths include better value-for-price perceptions and the positive interaction of exclusivity with higher prices, both of which increase online-only availability. Weaknesses include limited edition and exclusive products, and higher prices, all reducing the likelihood of online-only availability. Additionally, limited edition status combined with higher prices further limits online accessibility. This analysis helps Sephora strategically balance product value and pricing to optimize online availability and customer reach.
+The logistic regression analysis highlights key strengths and weaknesses affecting the likelihood of products being online-only on Sephora's platform. Strengths include better value-for-price perceptions and the positive interaction of exclusivity with higher prices, both of which increase online-only availability. Weaknesses include limited edition and exclusive products, and higher prices, all reducing the likelihood of online-only availability. Additionally, limited edition status combined with higher prices further limits online accessibility. 
 
 
 
