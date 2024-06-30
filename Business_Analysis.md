@@ -1,11 +1,11 @@
-# Business Analysis of the Personal Care and Beauty Market  
+## Business Analysis of the Personal Care and Beauty Market  
 
-# Case Sephora Beauty Retailer  
+## Case Sephora Beauty Retailer  
 **Edward Guzman Leano**
 
 **eguzmanleano30@gmail.com**
 
-## Justification for the Project:
+### Justification for the Project:
 
 The main objective of this project is to develop an knowledge of the requirements of Sephora’s clients, analyze opportunities that can be exploited, and weaknesses that can be avoided from online sales. 
 
