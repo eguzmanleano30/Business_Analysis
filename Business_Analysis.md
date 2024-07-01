@@ -109,3 +109,6 @@ The multiple linear regression analysis reveals key strengths (opportunities) an
 | Log(Price)               | \-0.81          | Each one-unit increase in log(price) decreases the log(love) by 0.81, indicating that higher-priced products tend to receive less customer love. |
 
 
+## Conclusion
+
+The comprehensive analysis of customer preferences and behavior regarding online shopping at Sephora has provided valuable insights that can inform strategic decision-making and enhance business performance. Through exploratory data analysis (EDA), logistic regression analysis, and multiple linear regression analysis, we have identified essential factors influencing online shopping preferences and customer love for products on Sephora's website. Indeed, promoting price reduction increases online sales and the loyalty of Sephora's clients. Similarly, beauty products are only available for purchase through Sephora's stores and are not sold by other retailers, increasing customer loyalty.
